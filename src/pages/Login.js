@@ -80,6 +80,7 @@ class Login extends React.Component {
                                 style = {styles.textInput}
                                 placeholder = "********"
                                 value = {this.state.password}
+                                secureTextEntry
                                 onChangeText = { value => this.onChangeHandler('password', value)} 
                             />
                         </FormRow>

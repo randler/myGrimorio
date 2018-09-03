@@ -18,6 +18,7 @@ export default createStackNavigator({
             headerTitleStyle: {
                 color: '#FFFFFF',
                 fontSize: 30,
+                marginLeft: 80,
                 flex: 1,
                 textAlign: 'center',
                 marginBottom: 5, 

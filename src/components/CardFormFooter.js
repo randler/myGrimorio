@@ -10,7 +10,7 @@ import {
 const CardFormFooter = props => {
     const { children } = props;
     return (
-        <TouchableWithoutFeedback onPress = { () => console.log("Clicou para login") }>
+        <TouchableWithoutFeedback onPress = { () => console.log("Clicou para Cadastrar-se") }>
             <View style = {styles.container}>
                 { children }
             </View>
