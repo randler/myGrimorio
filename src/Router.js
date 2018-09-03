@@ -1,28 +1,26 @@
 import { createStackNavigator } from 'react-navigation';
-import Home from './pages/Home';
 
+import Login from './pages/Login';
 
 export default createStackNavigator({
-    'Home': {
-        screen: Home,
-        navigationOptions: {
-
-        }
+    'Login': {
+        screen: Login,
     }
 }, {
         navigationOptions: {
-            title: 'MyGrimorio',
+            title: 'MyGrimório',
             headerTintColor: '#FFFFFF',
             headerStyle: {
                 backgroundColor: '#383838',
                 borderBottomWidth: 1,
-                borderBottomColor: '#515151'
+                borderBottomColor: '#a37c00'
             },
             headerTitleStyle: {
                 color: '#FFFFFF',
                 fontSize: 30,
                 flex: 1,
-                textAlign: 'center'
+                textAlign: 'center',
+                marginBottom: 5, 
             }
         }
     }
