@@ -11,7 +11,6 @@ import {
 } from 'react-native';
 
 import CardForm from '../components/CardForm';
-import CardFormFooter from '../components/CardFormFooter';
 import FormRow from '../components/FormRow';
 
 const bookBackground = require('../../resources/img/book.jpg');
@@ -33,6 +32,7 @@ class Login extends React.Component {
         super(props);
 
         this.state = {
+            nome: '',
             mail: '',
             password: '',
             isLoading: false,
@@ -53,9 +53,9 @@ class Login extends React.Component {
         return (
             <TouchableOpacity
                 style = {styles.buttonLogin}
-                onPress = { () => this.props.navigation.replace('home') }
+                onPress = { () => console.log("Clicou para login") }
                 underlayColor = '#a37c00'>
-                <Text style = {styles.buttonLoginText}>Entrar</Text>
+                <Text style = {styles.buttonLoginText}>Salvar</Text>
             </TouchableOpacity>
         )
     }
@@ -67,8 +67,15 @@ class Login extends React.Component {
                 style={styles.imageBook}
                 source={ bookBackground } />
                 <View style = {styles.cardLogin}>
-                    <CardForm imagem = 'login' >
-                        <FormRow first >
+                    <CardForm imagem = 'register' >
+                        <FormRow first>
+                            <TextInput
+                                style = {styles.textInput}
+                                placeholder = "Garosberto Armstrong"
+                                value = {this.state.nome}
+                                onChangeText = { value => this.onChangeHandler('nome', value)} />
+                        </FormRow>
+                        <FormRow >
                             <TextInput
                                 style = {styles.textInput}
                                 placeholder = "user@mail.com"
@@ -86,9 +93,6 @@ class Login extends React.Component {
                         </FormRow>
                         { this.renderButton() }
                     </CardForm>
-                    <CardFormFooter toScreen = {() => this.props.navigation.navigate('register')} >
-                        <Text style = {styles.textFooter}>Cadastre-se</Text>
-                    </CardFormFooter>
                 </View>
             </View>
         );

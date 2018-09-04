@@ -8,9 +8,10 @@ import {
 
 // create a component
 const CardFormFooter = props => {
-    const { children } = props;
+    
+    const { children, toScreen } = props;
     return (
-        <TouchableWithoutFeedback onPress = { () => console.log("Clicou para Cadastrar-se") }>
+        <TouchableWithoutFeedback onPress = { toScreen }>
             <View style = {styles.container}>
                 { children }
             </View>
