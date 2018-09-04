@@ -1,21 +1,22 @@
 import { createMaterialTopTabNavigator } from 'react-navigation';
 
-import Home from './home/Home';
-import Weapons from './home/Weapons';
 
-export const HistoryTabNavigation = createMaterialTopTabNavigator({
-    'DescriptionScreen': {
-        screen: Home,
+import MyMagics from '../../Tabs/magic/MyMagics';
+import Magics from '../../Tabs/magic/Magics';
+
+export const MagicTabNavigation = createMaterialTopTabNavigator({
+    'myMagics': {
+        screen: MyMagics,
         navigationOptions: { 
             header: null,
-            title: 'Descrição'
+            title: 'Minhas'
         }
     },
-    'weapons': {
-        screen: Weapons,
+    'magics': {
+        screen: Magics,
         navigationOptions: { 
             header: null,
-            title: 'Armas'
+            title: 'Todas'
         }
     }
 

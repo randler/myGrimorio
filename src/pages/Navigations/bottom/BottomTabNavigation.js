@@ -4,8 +4,7 @@ import { Image } from 'react-native';
 
 import { HomeTabNavigation } from '../Top/HomeTabNavigation';
 import { HistoryTabNavigation } from '../Top/HistoryTabNavigation';
-
-import Magics from '../../Tabs/magic/Magics';
+import { MagicTabNavigation } from '../Top/MagicTabNavigation';
 
 const DESC_ICON     = require('../../../../resources/img/warrior_icon.png');
 const MAGIC_ICON    = require('../../../../resources/img/mage_icon.png');
@@ -25,7 +24,7 @@ export const BottomTabNavigator = createBottomTabNavigator ({
         }
     },
     'Magics': {
-        screen: Magics,
+        screen: MagicTabNavigation,
         navigationOptions: {
             tabBarIcon: <Image source = {MAGIC_ICON} style = {{width: 30, height: 30}} />
         }
