@@ -20,7 +20,7 @@ class Magics extends React.Component {
         return (
             <View style={styles.container}>
                 <ScrollView>
-                    { magiaTeste. map( (magic, key) => ( <CardMagic key={key} magic = { magic } /> ))}
+                    { magiaTeste.map( (magic, key) => ( <CardMagic key={key} magic = { magic } /> ))}
                 </ScrollView>
                 <View style={styles.filterContainer}>
                     <Image source={FILTER_ICON} style={styles.filterIcon} />

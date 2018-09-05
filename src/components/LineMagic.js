@@ -8,10 +8,10 @@ const LineMagic = props => {
     return (
         <View style={styles.container}>
             <View>
-                <Text style={styles.label}>{ label }</Text>
+                <Text style={[styles.label, textHeader ? styles.textHeader: null]}>{ label }</Text>
             </View>
             <View>
-                <Text style={styles.value}>{ value }</Text>
+                <Text style={[styles.value, textHeader ? styles.textHeader: null]}>{ value }</Text>
             </View>
         </View>
     );
@@ -24,11 +24,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
     },
     label: {
-
+        fontWeight: 'bold',
     },
     value: {
         marginLeft: 5,
-        fontWeight: 'bold',
+    },
+    textHeader: {
+        fontSize: 16,
+        color: '#878787'
     }
 });
 

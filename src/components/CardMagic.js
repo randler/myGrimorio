@@ -64,7 +64,9 @@ class CardMagic extends React.Component {
                     presentationStyle="overFullScreen"
                     visible={this.state.modalVisible}
                     onRequestClose={()=> this.setModalVisible(!this.state.modalVisible)}>
-                        <ModalMagic magic={this.props.magic} />
+                        <ModalMagic 
+                            setVisible={()=> {this.setModalVisible(!this.state.modalVisible)}} 
+                            magic={this.props.magic} />
                 </Modal>
             </View>
         );
