@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 
 // create a component
 const LineMagic = props => {
-    const  {label, value} = props;
+    const  {label, value, textHeader} = props;
     return (
         <View style={styles.container}>
             <View>
