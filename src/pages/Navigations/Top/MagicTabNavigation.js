@@ -2,7 +2,7 @@ import { createMaterialTopTabNavigator } from 'react-navigation';
 
 
 import MyMagics from '../../Tabs/magic/MyMagics';
-import Magics from '../../Tabs/magic/Magics';
+import AllMagics from '../../Tabs/magic/AllMagics';
 
 export const MagicTabNavigation = createMaterialTopTabNavigator({
     'myMagics': {
@@ -12,8 +12,8 @@ export const MagicTabNavigation = createMaterialTopTabNavigator({
             title: 'Minhas'
         }
     },
-    'magics': {
-        screen: Magics,
+    'allMagics': {
+        screen: AllMagics,
         navigationOptions: { 
             header: null,
             title: 'Todas'

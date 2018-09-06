@@ -2,29 +2,54 @@
 import React from 'react';
 import { 
     ScrollView,
+    TouchableOpacity,
     Image,
     View,
-    Text,
+    Modal,
     StyleSheet 
 } from 'react-native';
 import CardMagic from '../../../components/CardMagic';
 
-import listOfSpells from '../../../../resources/data/listOfSpells.json';
-import magiaTeste from '../../../../resources/data/magiaTeste.json';
+import SearchBar from '../../../components/SearchBar';
+
+import { connect } from 'react-redux';
 
 const FILTER_ICON = require('../../../../resources/img/filter.png');
 
 // create a component
-class Magics extends React.Component {
+class AllMagics extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            searchMode: false,
+        }
+    }
+
+    setSearchMode(visible) {
+        this.setState({searchMode: visible});
+    }
+
+    renderSearch() {
+        if(this.state.searchMode) {
+            return (<SearchBar />);
+        }
+    }
+
     render() {
         return (
             <View style={styles.container}>
+                { this.renderSearch() }
                 <ScrollView>
-                    { magiaTeste.map( (magic, key) => ( <CardMagic key={key} magic = { magic } /> ))}
+                    { this.props.magics.map( (magic, key) => ( <CardMagic key={key} magic = { magic } /> ))}
                 </ScrollView>
                 <View style={styles.filterContainer}>
-                    <Image source={FILTER_ICON} style={styles.filterIcon} />
+                    <TouchableOpacity 
+                        onPress={() => this.setSearchMode(!this.state.searchMode)}>
+                        <Image source={FILTER_ICON} style={styles.filterIcon} />
+                    </TouchableOpacity>
                 </View>
+                
             </View>
         );
     }
@@ -58,5 +83,10 @@ const styles = StyleSheet.create({
     }
 });
 
+const mapStateToProps = state => {
+    const { all_magics } = state;
+    return all_magics;
+}
+
 //make this component available to the app
-export default Magics;
+export default connect(mapStateToProps)(AllMagics);

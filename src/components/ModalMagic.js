@@ -28,14 +28,14 @@ const ModalMagic = ({magic, setVisible}) => {
                 <View style={[styles.modalDefault, styles.headerModal]}>
                     <Text style={styles.name}>{ magic.name }</Text>
                     <Text style={styles.TextHeader}>{ magic.level }º nível de {magic.school.pt} {magic.concentration ? '(Concentração)' : magic.ritual ? '(Ritual)' : '' }</Text>
-                    <LineMagic label="Conjuradores:" textHeader value={ magic.classes.map(classe => (` ${classe} |`)) } />
+                    <LineMagic label="Conjuradores:" value={ magic.classes.map(classe => (` ${classe} |`)) } textHeader />
                 </View>
                 <View style={[styles.modalDefault, styles.bodyModal]}>
                     <LineMagic label="Tempo de conjuração:" value={ magic.castingTime } />
                     <LineMagic label="Alcance:" value={ magic.range } />
                     <LineMagic label="Componentes:" value={ magic.components } />
-                    <LineMagic label="Duração:" value={ magic.duration } />
-                    <HTML style={{marginTop: 10}} html={ magic.description } imagesMaxWidth={Dimensions.get('window').width} />
+                    <LineMagic label="Duração:" value={ magic.duration } last />
+                    <HTML html={ magic.description } imagesMaxWidth={Dimensions.get('window').width} />
                 </View>
                 <View style={[styles.modalDefault, styles.footerModal]}>
                     <Text>Fonte: { magic.nome }</Text>
