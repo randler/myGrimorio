@@ -4,7 +4,7 @@ import { SEARCH_MAGIC } from '../../actions';
 import listOfSpells from '../../../resources/data/listOfSpells.json';
 import magiaTeste from '../../../resources/data/magiaTeste.json';
 
-const INITIAL_STATE = magiaTeste;
+const INITIAL_STATE = listOfSpells;
 
 export default function magicReducer (state = INITIAL_STATE, action) {
     switch (action.type) {
