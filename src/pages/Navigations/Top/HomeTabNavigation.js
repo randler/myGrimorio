@@ -2,6 +2,7 @@ import { createMaterialTopTabNavigator } from 'react-navigation';
 
 import Home from '../../Tabs/home/Home';
 import Weapons from '../../Tabs/home/Weapons';
+import Tributes from '../../Tabs/home/Tributes';
 
 export const HomeTabNavigation = createMaterialTopTabNavigator({
     'DescriptionScreen': {
@@ -9,6 +10,13 @@ export const HomeTabNavigation = createMaterialTopTabNavigator({
         navigationOptions: { 
             header: null,
             title: 'Descrição'
+        }
+    },
+    'tributes': {
+        screen: Tributes,
+        navigationOptions: { 
+            header: null,
+            title: 'Atributos'
         }
     },
     'weapons': {

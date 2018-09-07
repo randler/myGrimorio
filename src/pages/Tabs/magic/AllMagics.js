@@ -36,12 +36,21 @@ class AllMagics extends React.Component {
         }
     }
 
+    renderCardMagic(magic, key) {
+        if(key == 0){
+            return ( <CardMagic key={key} first magic = { magic } /> );
+        } else if( key == (this.props.magics.length - 1)) {
+            return ( <CardMagic key={key} last magic = { magic } /> );
+        }
+        return ( <CardMagic key={key} magic = { magic } /> );
+    }
+
     render() {
         return (
             <View style={styles.container}>
                 { this.renderSearch() }
                 <ScrollView>
-                    { this.props.magics.map( (magic, key) => ( <CardMagic key={key} magic = { magic } /> ))}
+                    { this.props.magics.map( (magic, key) => this.renderCardMagic(magic, key) )}
                 </ScrollView>
                 <View style={styles.filterContainer}>
                     <TouchableOpacity 

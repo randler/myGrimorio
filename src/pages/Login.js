@@ -10,9 +10,13 @@ import {
     TextInput
 } from 'react-native';
 
+import { connect } from 'react-redux';
+
 import CardForm from '../components/CardForm';
 import CardFormFooter from '../components/CardFormFooter';
 import FormRow from '../components/FormRow';
+
+import { iniciar } from '../actions';
 
 const bookBackground = require('../../resources/img/book.jpg');
 
@@ -47,13 +51,18 @@ class Login extends React.Component {
         });
     }
 
+    logar() {
+        this.props.iniciar();
+        this.props.navigation.replace('home');
+    }
+
     renderButton() {
         if (this.state.isLoading)
             return <ActivityIndicator color = "#a37c00" style = { styles.buttonLogin } />
         return (
             <TouchableOpacity
                 style = {styles.buttonLogin}
-                onPress = { () => this.props.navigation.replace('home') }
+                onPress = { () => this.logar()}
                 underlayColor = '#a37c00'>
                 <Text style = {styles.buttonLoginText}>Entrar</Text>
             </TouchableOpacity>
@@ -102,6 +111,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#DDD',
     },
     textInput: {
+        padding: 5,
         paddingLeft: 15,
         color: '#FFF'
     },
@@ -138,5 +148,9 @@ const styles = StyleSheet.create({
     }
 });
 
+const mapDispatchToProps = {
+    iniciar
+}
+
 //make this component available to the app
-export default Login;
+export default connect(null, mapDispatchToProps)(Login);

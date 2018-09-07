@@ -1,4 +1,5 @@
 export default classes = [
+    'Todas',
     'Bardo',
     'Bruxo',
     'Clérigo',

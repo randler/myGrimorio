@@ -1,29 +1,30 @@
-import { SEARCH_MAGIC } from '../../actions';
+import { SEARCH_MAGIC, CLEAR_FILTER, INICIAR } from '../../actions';
 
 
 import listOfSpells from '../../../resources/data/listOfSpells.json';
-import magiaTeste from '../../../resources/data/magiaTeste.json';
 
 const INITIAL_STATE = listOfSpells;
 
 export default function magicReducer (state = INITIAL_STATE, action) {
     switch (action.type) {
         case SEARCH_MAGIC:
-            const magicFound = search(action.label, action.value);
+            const magicFound = search(state, action.label, action.value);
             return magicFound;
+        case CLEAR_FILTER: 
+            return INITIAL_STATE;
+        case INICIAR: 
+            return INITIAL_STATE;
         default:
             return state;
     }
 }
 
-function search(label, value) {
-    if (value == '') {
-        return INITIAL_STATE;
-    }
+function search(state, label, value) {
+
     const magicFound = {magics: []};
-    INITIAL_STATE.magics.forEach(magic => {
+    state.magics.forEach(magic => {
         switch (label) {
-            case 'name':
+            case 'nome':
                 if (magic.name.toLowerCase().includes(value.toLowerCase())) {
                     magicFound.magics.push(magic);
                 }

@@ -1,4 +1,5 @@
 export default niveis = [
+    'Todas',
     '0',
     '1',
     '2',

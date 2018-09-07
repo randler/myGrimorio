@@ -71,7 +71,7 @@ class Login extends React.Component {
                         <FormRow first>
                             <TextInput
                                 style = {styles.textInput}
-                                placeholder = "Garosberto Armstrong"
+                                placeholder = "Seu nome"
                                 value = {this.state.nome}
                                 onChangeText = { value => this.onChangeHandler('nome', value)} />
                         </FormRow>
@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#DDD',
     },
     textInput: {
+        padding: 5,
         paddingLeft: 15,
         color: '#FFF'
     },

@@ -40,7 +40,7 @@ class CardMagic extends React.Component {
             <View>
                 <TouchableOpacity 
                     onPress={() => this.setState({modalVisible: true})}
-                    style={styles.container}>
+                    style={[styles.container, (this.props.first || this.props.last ) ? styles.firstOrLast : null ]}>
                     <Text style={styles.name}>{name}</Text>
                     <LineMagic
                         label="Escola:"
@@ -88,6 +88,9 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
     },
+    firstOrLast: {
+        marginTop: 5,
+    }
 });
 
 //make this component available to the app

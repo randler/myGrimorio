@@ -4,12 +4,13 @@ import {
     View,
     Text,
     TextInput,
+    TouchableHighlight,
     Picker,
     StyleSheet,
     Dimensions
 } from 'react-native';
 import { connect } from 'react-redux';
-import { searchMagic } from '../actions';
+import { searchMagic, clearFilter } from '../actions';
 
 import niveis from '../../resources/data/niveis';
 import classes from '../../resources/data/classes';
@@ -21,10 +22,19 @@ class SearchBar extends React.Component {
         super(props);
 
         this.state = {
-            name: '',
-            nivel: 0,
-            classe: ''
+            nome: '',
+            nivel: 'Todas',
+            classe: 'Todas'
         }
+    }
+
+    clearState() {
+        this.setState({
+            nome: '',
+            nivel: 'Todas',
+            classe: 'Todas'
+        });
+        this.props.clearFilter();
     }
 
     setField(label, value) {
@@ -32,7 +42,7 @@ class SearchBar extends React.Component {
             [label]: value
         });
         
-        this.props.searchMagic( label, value );
+        this.props.searchMagic(label, value);
     }
 
     niveis() {
@@ -59,8 +69,8 @@ class SearchBar extends React.Component {
                         style={styles.input}
                         placeholder="Digite o nome da magia"
                         placeholderTextColor='#000'
-                        value={this.state.name}
-                        onChangeText={ name => this.setField('name', name)}
+                        value={this.state.nome}
+                        onChangeText={ nome => this.setField('nome', nome)}
                     />
                 </View>
                 <View style={styles.containerSearch}>
@@ -82,6 +92,14 @@ class SearchBar extends React.Component {
                             { this.classes() }
                     </Picker>
                 </View>
+                <View style={styles.containerSearch}>
+                    <TouchableHighlight
+                        style={styles.btnClearFilter}
+                        onPress={ () => this.clearState() }
+                        underlayColor='rgba(214, 162, 0, 0.3)'>
+                        <Text style={styles.txtClearFilter}>Limpar Filtros</Text>
+                    </TouchableHighlight>
+                </View>
             </View>
         );
     }
@@ -93,12 +111,24 @@ const styles = StyleSheet.create({
         width: '100%',
         borderBottomWidth: 2,
         borderBottomColor: '#D6A200',
-        height: 100,
+        height: 140,
         padding: 5,
         backgroundColor: '#FFF',
     },
     containerSearch: {
         flexDirection: 'row',
+    },
+    btnClearFilter: {
+        width: Dimensions.get('window').width - 50,
+        marginHorizontal: 20,
+        backgroundColor: '#383838',
+        padding: 5,
+        borderRadius: 3,
+    },
+    txtClearFilter: {
+        color: '#FFF',
+        fontSize: 15,
+        alignSelf: 'center',
     },
     textLabel:{
         marginTop: 8,
@@ -106,21 +136,21 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     textLabelPicker: {
-        marginTop: 20
+        marginTop: 12
     },
     input: {
         flex: 1,
         marginLeft: 5,
-        paddingLeft: 8,
+        padding: 8,
     },
     picker: {
         marginLeft: 5,
     },
     pickerNivel: {
-        width: 60,
+        width: 100,
     },
     pickerClasse: {
-        width: Dimensions.get('window').width - 180,
+        width: Dimensions.get('window').width - 210,
     }
 });
 
@@ -132,6 +162,7 @@ const styles = StyleSheet.create({
 
 const mapDispatchToProps = {
     searchMagic,
+    clearFilter
 }
 
 //make this component available to the app
