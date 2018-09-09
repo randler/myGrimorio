@@ -12,8 +12,8 @@ import {
 import { connect } from 'react-redux';
 import { searchMagic, clearFilter } from '../actions';
 
-import niveis from '../../resources/data/niveis';
-import classes from '../../resources/data/classes';
+import niveis from '../../resources/data/js/niveis';
+import classes from '../../resources/data/js/classes';
 
 // create a component
 class SearchBar extends React.Component {

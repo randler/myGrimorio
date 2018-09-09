@@ -1,7 +1,6 @@
 import { SEARCH_MAGIC, CLEAR_FILTER, INICIAR } from '../../actions';
 
-
-import listOfSpells from '../../../resources/data/listOfSpells.json';
+import listOfSpells from '../../../resources/data/json/listOfSpells.json';
 
 const INITIAL_STATE = listOfSpells;
 

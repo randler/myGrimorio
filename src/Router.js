@@ -1,13 +1,30 @@
+import { React } from 'react';
+import { Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Dashboard from './pages/Dashboard';
 
 import { BottomTabNavigator } from './pages/Navigations/bottom/BottomTabNavigation';
 
 export default createStackNavigator({
     'login': {
         screen: Login,
+    },
+    'dashboard': {
+        screen: Dashboard,
+        navigationOptions: {
+            title: 'Meus personagens',
+            headerTitleStyle: {
+                color: '#FFFFFF',
+                fontSize: 30,
+                flex: 1,
+                textAlign: 'center',
+                marginBottom: 5, 
+                marginLeft: 60,
+            }
+        }
     },
     'register': {
         screen: Register,
@@ -29,9 +46,8 @@ export default createStackNavigator({
             headerStyle: {
                 height: 0,
                 backgroundColor: '#383838'
-            },
+            },            
         }
-
     },
 }, {
         navigationOptions: {

@@ -13,6 +13,9 @@ import {
 import CardForm from '../components/CardForm';
 import FormRow from '../components/FormRow';
 
+import { connect } from 'react-redux';
+import { tryRegister } from '../actions';
+
 const bookBackground = require('../../resources/img/book.jpg');
 
 // create a component
@@ -46,18 +49,74 @@ class Login extends React.Component {
             [field]: value
         });
     }
+    tryRegister() {
+        this.setState({isLoading: true, message: ''});
+        const { mail: email, password } = this.state;
+
+        if(!email || !password) {
+            this.setState({
+                message: 'Digite os dados',
+                isLoading: false
+            });
+        } else {
+            
+            this.props.tryRegister({email, password})
+            .then((user) => {
+                if (user)
+                  return this.props.navigation.replace('home');  
+
+                this.setState({
+                    isLoading: false,
+                    message: ''
+                });
+            })
+            .catch( error =>{
+                this.setState({
+                    isLoading: false, 
+                    message: this.getMessageByErrorCode(error)
+                });
+            });
+        }
+    }
+
+    getMessageByErrorCode(errorCode) {
+        switch(errorCode) {
+            case 'auth/email-already-in-use':
+                return 'E-mail já está em uso';
+            case 'auth/invalid-email':
+                return 'E-mail inválido';
+            case 'auth/operation-not-allowed':
+                return 'Operação não permitida';
+            case 'auth/weak-password':
+                return 'Senha fraca';
+            default:
+                return errorCode;
+        }
+    }
 
     renderButton() {
         if (this.state.isLoading)
-            return <ActivityIndicator color = "#a37c00" style = { styles.buttonLogin } />
+            return <ActivityIndicator color = "#FFF" style = { styles.buttonLogin } />
         return (
             <TouchableOpacity
                 style = {styles.buttonLogin}
-                onPress = { () => console.log("Clicou para login") }
+                onPress = { () => this.tryRegister() }
                 underlayColor = '#a37c00'>
-                <Text style = {styles.buttonLoginText}>Salvar</Text>
+                <Text style = {styles.buttonLoginText}>Cadastrar</Text>
             </TouchableOpacity>
         )
+    }
+    renderMessage() {
+        const { message } = this.state;
+
+        if(!message)
+            return null;
+
+        return (
+            <View style={styles.errorDiv}>
+                <Text style={styles.errorText}>{ message }</Text>
+            </View>
+        );
     }
 
     render() {
@@ -68,13 +127,6 @@ class Login extends React.Component {
                 source={ bookBackground } />
                 <View style = {styles.cardLogin}>
                     <CardForm imagem = 'register' >
-                        <FormRow first>
-                            <TextInput
-                                style = {styles.textInput}
-                                placeholder = "Seu nome"
-                                value = {this.state.nome}
-                                onChangeText = { value => this.onChangeHandler('nome', value)} />
-                        </FormRow>
                         <FormRow >
                             <TextInput
                                 style = {styles.textInput}
@@ -91,6 +143,7 @@ class Login extends React.Component {
                                 onChangeText = { value => this.onChangeHandler('password', value)} 
                             />
                         </FormRow>
+                        { this.renderMessage() }
                         { this.renderButton() }
                     </CardForm>
                 </View>
@@ -140,8 +193,21 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#D6A200',
         alignSelf: 'center',
+    },
+    errorDiv: {
+        marginVertical: 5,
+    },
+    errorText: {
+        alignSelf: 'center',
+        color: '#FFF',
+        fontSize: 18,
+        fontWeight: 'bold'
     }
 });
 
+const mapDispatchToProps = {
+    tryRegister
+}
+
 //make this component available to the app
-export default Login;
+export default connect(null, mapDispatchToProps)(Login);
