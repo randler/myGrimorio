@@ -26,16 +26,13 @@ const getClassName = (arrayClass) => {
 // create a component
 const CardPersonagem = ({personagem}) => {
     return (
-        <TouchableOpacity 
-            onPress={() => console.log(personagem)}>
-            <View style={styles.container}>
-                <LinePersonagem label='Nome' value={personagem.name}  />
-                <LinePersonagem label='Classe' value={getClassName(personagem.class)}  />
-                <LinePersonagem label='Nível' value={getLevel(personagem.class)}  />
-                <LinePersonagem label='Raça' value={ personagem.race }  />
-                <LinePersonagem label='Tendência' value={personagem.tendency}  />
-            </View>
-        </TouchableOpacity>
+        <View style={styles.container}>
+            <LinePersonagem label='Nome' value={personagem.name}  />
+            <LinePersonagem label='Classe' value={getClassName(personagem.class)}  />
+            <LinePersonagem label='Nível' value={getLevel(personagem.class)}  />
+            <LinePersonagem label='Raça' value={ personagem.race }  />
+            <LinePersonagem label='Tendência' value={personagem.tendency}  />
+        </View>
     );
 };
 

@@ -19,7 +19,7 @@
                 "strength": ""
             },
             "characteristics": [],
-            "class": "",
+            "class": [{}],
             "displacement": "",
             "equipments": {
               "desc": [],

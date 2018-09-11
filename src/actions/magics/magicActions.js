@@ -1,3 +1,5 @@
+import firebase from 'firebase';
+
 export const SEARCH_MAGIC = 'SEARCH_MAGIC';
 export const searchMagic = (label, value) => {
     return {
@@ -13,8 +15,16 @@ export const clearFilter = () => {
     }
 };
 export const INICIAR = 'INICIAR';
-export const iniciar = () => {
+export const iniciar = magics => {
     return {
-        type: INICIAR
+        type: INICIAR,
+        magics
+    }
+};
+export const SET_MAGICS = 'SET_MAGICS';
+export const setMagics = magics => {
+    return {
+        type: SET_MAGICS,
+        magics
     }
 };

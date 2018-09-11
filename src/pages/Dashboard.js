@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { 
     ScrollView,
+    ActivityIndicator,
     View,
     Text,
     Image,
@@ -26,26 +27,21 @@ class Dashboard extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            personagens: []
-        }
     }
 
     componentWillMount() {
         //console.log('usuario do redux: ',this.props.user.uid);
         this.props.navigation.setParams({logout: this.logout});
-        
-        
+        this.getPersonsFirebase();
     }
     componentDidMount() {
-        this.getPersonsFirebase();
     }
     
     getPersonsFirebase() {
         var persons = firebase.database().ref("persons");
         persons.on('value', (snapshot) => {
             const person = snapshot.val();
-            this.setState({personagens: person});
+            this.props.setPersons(person);
         });
     }
 
@@ -87,17 +83,24 @@ class Dashboard extends Component {
     }
 
     renderDashboard() {
-        if (this.state.personagens.length == 0) {
+        if (this.props.persons && this.props.persons.length == 0) {
             return (<View>
-                        <Text style={styles.textNothing}>Procurando personagens</Text>
+                        <ActivityIndicator color = "#d6a200" />
                     </View>);
-        } 
-        return this.state.personagens.map((personagem, key) => (<CardPersonagem key={key} personagem={personagem} />));
+        } else if(this.props.persons) {
+            return this.props.persons.map((personagem, key) => (
+                    <TouchableOpacity 
+                        key={key}
+                        onPress={() => this.props.navigation.navigate('home', {id: personagem.idPerson} )}>
+                        <CardPersonagem personagem={personagem} />
+                    </TouchableOpacity>
+                ));
+        }
     }
 
     render() {
         return (
-            <View style={[styles.container, this.state.personagens.length == 0 ? styles.containerNothing : null ]}>
+            <View style={[styles.container, (this.props.persons && this.props.persons.length == 0) ? styles.containerNothing : null ]}>
                 <ScrollView>
                     {this.renderDashboard()}
                 </ScrollView>
@@ -111,7 +114,7 @@ class Dashboard extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#FFF',
+        backgroundColor: '#DDD',
     },
     containerNothing: {
         padding: 10,
@@ -132,7 +135,7 @@ const mapDispatchToProps = {
 
 const mapStateToProps = state => {
     const { persons } = state;
-    return persons;
+    return {persons};
 }
 
 //make this component available to the app

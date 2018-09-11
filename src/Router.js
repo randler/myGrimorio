@@ -18,7 +18,7 @@ export default createStackNavigator({
             title: 'Meus personagens',
             headerTitleStyle: {
                 color: '#FFFFFF',
-                fontSize: 30,
+                fontSize: 25,
                 flex: 1,
                 textAlign: 'center',
                 marginBottom: 5, 
@@ -32,7 +32,7 @@ export default createStackNavigator({
             title: 'Cadastre-se',
             headerTitleStyle: {
                 color: '#FFFFFF',
-                fontSize: 30,
+                fontSize: 25,
                 flex: 1,
                 textAlign: 'center',
                 marginBottom: 5, 
@@ -60,7 +60,7 @@ export default createStackNavigator({
             },
             headerTitleStyle: {
                 color: '#FFFFFF',
-                fontSize: 30,
+                fontSize: 25,
                 marginLeft: 80,
                 flex: 1,
                 textAlign: 'center',

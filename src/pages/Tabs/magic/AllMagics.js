@@ -5,12 +5,16 @@ import {
     TouchableOpacity,
     Image,
     View,
+    ActivityIndicator,
     Modal,
     StyleSheet 
 } from 'react-native';
+import firebase from 'firebase';
+
 import CardMagic from '../../../components/CardMagic';
 
 import SearchBar from '../../../components/SearchBar';
+import { setMagics } from '../../../actions';
 
 import { connect } from 'react-redux';
 
@@ -22,8 +26,17 @@ class AllMagics extends React.Component {
         super(props);
 
         this.state = {
-            searchMode: false,
+            searchMode: false
         }
+    }
+
+    componentWillMount() {
+        firebase.database().ref("magics")
+            .on('value', (snapshot) => {
+                const magics = snapshot.val();
+                //this.setState({magics});
+                this.props.setMagics(magics);
+        });
     }
 
     setSearchMode(visible) {
@@ -39,7 +52,7 @@ class AllMagics extends React.Component {
     renderCardMagic(magic, key) {
         if(key == 0){
             return ( <CardMagic key={key} first magic = { magic } /> );
-        } else if( key == (this.props.magics.length - 1)) {
+        } else if( key == (this.props.all_magics.length - 1)) {
             return ( <CardMagic key={key} last magic = { magic } /> );
         }
         return ( <CardMagic key={key} magic = { magic } /> );
@@ -49,8 +62,10 @@ class AllMagics extends React.Component {
         return (
             <View style={styles.container}>
                 { this.renderSearch() }
-                <ScrollView>
-                    { this.props.magics.map( (magic, key) => this.renderCardMagic(magic, key) )}
+                <ScrollView contentContainerStyle={styles.contencContainer}>
+                    {this.props.all_magics.length > 0 ? 
+                        this.props.all_magics.map( (magic, key) => this.renderCardMagic(magic, key) ) :
+                        <ActivityIndicator color = "#d6a200" />}
                 </ScrollView>
                 <View style={styles.filterContainer}>
                     <TouchableOpacity 
@@ -89,13 +104,20 @@ const styles = StyleSheet.create({
         width: 40,
         height: 40,
         aspectRatio: 1
+    },
+    contencContainer: {
+        paddingVertical: 1,
     }
 });
 
+const mapDispatchToProps = {
+    setMagics
+}
+
 const mapStateToProps = state => {
     const { all_magics } = state;
-    return all_magics;
+    return { all_magics };
 }
 
 //make this component available to the app
-export default connect(mapStateToProps)(AllMagics);
+export default connect(mapStateToProps, mapDispatchToProps)(AllMagics);

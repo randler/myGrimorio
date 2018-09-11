@@ -5,3 +5,11 @@ export const setPersons = persons => {
         persons
     }
 };
+
+export const GET_PERSON = 'GET_PERSON';
+export const getPerson = (id) => {
+    return {
+        type: GET_PERSON,
+        id
+    }
+} 

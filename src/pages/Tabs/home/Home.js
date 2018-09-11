@@ -7,47 +7,53 @@ import {
     Image,
     Text,
 } from 'react-native';
+import { connect } from 'react-redux';
 
 import DescText from '../../../components/DescText';
 import Traces from '../../../components/Traces';
+
+import { getPerson } from '../../../actions';
 
 const PICTURE   = require('../../../../resources/img/picture_standard.png');
 
 // create a component
 class Home extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+
+    componentDidMount() {
+        this.props.getPerson(this.props.navigation.getParam('id'));
+    }
+
     render() {
         return (
-            <ScrollView style={styles.container}>
-                <View style={styles.containerHeader}>
-                    <View style={styles.containerDesc}>
-                    <Text style={styles.name}>Ethan Belmont</Text>
-                        <DescText label='Clase' value='Patrulheiro-7/Ladino-5/Paladino-6/Feiticeiro-1' />
-                        <DescText label='Raça' value='Asimar' />
-                        <DescText label='Tendência' value=' Caótico/Bom' />
-                        <DescText label='Antecedente' value='Nobre' />
-                        <DescText label='XP' value='0' last />
-
-                    </View>  
-                    <View style={styles.containerImage}>
-                        <Image source={PICTURE} style={styles.image} />
-                    </View>  
-                </View>
-                <Traces 
-                    label='Traços de Personalidade' 
-                    value='Eu sinto uma empatia tremenda por todos que sofrem.' />
-                <Traces 
-                    label='Ideais' 
-                    value='Bem Maior. Meus dons devem ser partilhados com todos, não usados em benefício próprio (Bom) 
-                    DEVER. Viverei de acordo com o que juro fazer ou morrerei tentando.' />
-                <Traces 
-                    label='Ligações' 
-                    value='Meu isolamento me deu grande discernimento sobre um grande mal que apenas eu posso destruir.
-                    Um "certo" vampiro jurou vingança contra todos os Belmont depois de ser derrotado por um.' />
-                <Traces 
-                    last
-                    label='Defeitos' 
-                    value='Eu gosto de guardar segredos e não os partilho com ninguém.
-                    Não costumo fazer amigos com facilidade.' />
+            <ScrollView >
+            {this.props.persons.map(person => {
+                    return (
+                        <View style={styles.container} key={person.idPerson}>
+                            <View style={styles.containerHeader}>
+                                <View style={styles.containerDesc}>
+                                        <Text style={styles.name}>{person.name}</Text>
+                                        <DescText label='Clase' value={person.class} />
+                                        <DescText label='Raça' value={person.race} />
+                                        <DescText label='Tendência' value={person.tendency} />
+                                        <DescText label='Antecedente' value={person.antecedent} />
+                                        <DescText label='XP' value={person.xp} last />
+                                
+                                    </View>  
+                                    <View style={styles.containerImage}>
+                                        <Image source={PICTURE} style={styles.image} />
+                                    </View>  
+                            </View>
+                            <Traces label='Traços de Personsalidade' value={person.antecedentTraces} />
+                            <Traces label='Ideais' value={person.antecedentTraces} />
+                            <Traces label='Ligações' value={person.antecedentTraces} />
+                            <Traces last label='Defeitos' value={person.antecedentTraces} />
+                        </View>
+                    )
+                })
+            }
             </ScrollView>
         );
     }
@@ -82,5 +88,14 @@ const styles = StyleSheet.create({
     },
 });
 
+const mapDispatchToProps = {
+    getPerson
+}
+
+const mapStateToProps = state => {
+    const { persons } = state;
+    return { persons };
+}
+
 //make this component available to the app
-export default Home;
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
