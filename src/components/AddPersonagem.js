@@ -8,7 +8,10 @@ const PLUS_ICON = require('../../resources/img/plus.png')
 const AddPersonagem = ({addPersonagem}) => {
     return (
             <View style={styles.container}>
-                <Image source={PLUS_ICON} style={styles.plusIcon} />
+                <TouchableOpacity
+                    onPress={addPersonagem}>
+                    <Image source={PLUS_ICON} style={styles.plusIcon} />
+                </TouchableOpacity>
             </View>
     );
 };

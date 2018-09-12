@@ -2,6 +2,7 @@
 import React from 'react';
 import { 
     View,
+    AsyncStorage,
     KeyboardAvoidingView,
     StyleSheet,
     ActivityIndicator,
@@ -48,21 +49,55 @@ class Login extends React.Component {
 
     }
 
+    componentWillMount() {
+        this._retrieveData();
+    }
+
     onChangeHandler(field, value) {
         this.setState({
             [field]: value
         });
     }
 
-    logar() {
+    _storeData = async (user) => {
+        try {
+            await AsyncStorage.setItem('@MyGrimorio:login', JSON.stringify([user]));
+        } catch(error) {
+            console.log('error: not was possible persist the user data in phone')
+        }
+    }
+    _retrieveData = async () => {
+        try {
+            const value = JSON.parse( await AsyncStorage.getItem('@MyGrimorio:login')) || [];
+            
+            if (value.length > 0) {
+                this.setState({
+                    mail: value[0].email, 
+                    password: value[0].password
+                });
+                this.logar(value[0].email, value[0].password)
+            }
+        } catch (error) {
+            return null;
+        }
+    }
+
+    logar(email = '', password = '') {
         
         this.setState({isLoading: true, message: ''});
-        const {mail: email, password} = this.state;
+        if (email === '' && password === '') { 
+            email = this.state.mail;
+            password = this.state.password;
+        }
+            
         
         this.props.tryLogin({email, password})
             .then((user) => {
-                if (user)
+                if (user){
+                    this._storeData({email, password});
+                    
                     return this.props.navigation.replace('dashboard');
+                }
 
                 this.setState({
                     isLoading: false,
@@ -85,6 +120,8 @@ class Login extends React.Component {
                 return 'Usuário não permitido';
             case 'auth/wrong-password':
                 return 'Senha e/ou Email incorreto(s)';
+            case 'auth/network-request-failed':
+                return 'Não consigo conectar :(';
             default:
                 return errorCode;
         }

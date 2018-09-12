@@ -7,6 +7,7 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 
 import { BottomTabNavigator } from './pages/Navigations/bottom/BottomTabNavigation';
+import AddPerson from './pages/person/AddPerson';
 
 export default createStackNavigator({
     'login': {
@@ -30,6 +31,19 @@ export default createStackNavigator({
         screen: Register,
         navigationOptions: {
             title: 'Cadastre-se',
+            headerTitleStyle: {
+                color: '#FFFFFF',
+                fontSize: 25,
+                flex: 1,
+                textAlign: 'center',
+                marginBottom: 5, 
+            }
+        }
+    },
+    'addPerson': {
+        screen: AddPerson,
+        navigationOptions: {
+            title: 'Novo Personagem',
             headerTitleStyle: {
                 color: '#FFFFFF',
                 fontSize: 25,

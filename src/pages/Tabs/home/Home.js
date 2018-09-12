@@ -8,6 +8,7 @@ import {
     Text,
 } from 'react-native';
 import { connect } from 'react-redux';
+import { firebase } from 'firebase';
 
 import DescText from '../../../components/DescText';
 import Traces from '../../../components/Traces';
@@ -22,8 +23,13 @@ class Home extends React.Component {
         super(props);
     }
 
-    componentDidMount() {
-        this.props.getPerson(this.props.navigation.getParam('id'));
+    componentWillMount() {
+        //this.props.getPerson(this.props.navigation.getParam('id'));
+        /*firebase.database().ref("persons")
+            .on('value', (snapshot) => {
+                const persons = snapshot.val();
+                this.props.setPersons(persons);
+        });*/
     }
 
     render() {

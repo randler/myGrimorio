@@ -1,66 +1,68 @@
 {
-	"persons": [
-		{
-			"AlliesAndOrganizations": "",
-			"antecedent": "",
-			"antecedentTraces": {
-				"personality": "",
-				"connections": "",
-				"defects": "",
-				"ideals": ""   
-			},
-			"armorClass": "",
-			"attributes": {
-				"charisma": "",
-				"constitution": "",
-				"dexterity": "",
-				"intelligency": "",
-				"knowledge": "",
-				"strength": ""
-			},
-			"characteristics": [""],
-			"class": [{
+	"fm3svBMxXpgiOtGizKQ3FquGzCD3" : {
+		"persons": [
+			{
+				"AlliesAndOrganizations": "",
+				"antecedent": "",
+				"antecedentTraces": {
+					"personality": "",
+					"connections": "",
+					"defects": "",
+					"ideals": ""   
+				},
+				"armorClass": "",
+				"attributes": {
+					"charisma": "",
+					"constitution": "",
+					"dexterity": "",
+					"intelligency": "",
+					"knowledge": "",
+					"strength": ""
+				},
+				"characteristics": [""],
+				"class": [{
+					"name": "",
+					"level": ""
+				}],
+				"displacement": "",
+				"equipments": {
+				"desc": [""],
+				"money": {
+					"pc": "",
+					"pp": "",
+					"pe": "",
+					"po": "",
+					"pl": ""
+				}  
+				},
+				"history": "",
+				"hurt": "",
+				"idUSer": "fm3svBMxXpgiOtGizKQ3FquGzCD3",
+				"languages": [""],
+				"lifePointsTemporary": "",
+				"lifePointsTotal": "",
+				"myMagics": {
+					"magics":[""]
+				},
 				"name": "",
-				"level": ""
-			}],
-			"displacement": "",
-			"equipments": {
-			"desc": [""],
-			"money": {
-				"pc": "",
-				"pp": "",
-				"pe": "",
-				"po": "",
-				"pl": ""
-			}  
-			},
-			"history": "",
-			"hurt": "",
-			"idUSer": "fm3svBMxXpgiOtGizKQ3FquGzCD3",
-			"languages": [""],
-			"lifePointsTemporary": "",
-			"lifePointsTotal": "",
-			"myMagics": {
-				"magics":[""]
-			},
-			"name": "",
-			"othersProficiencies": [""],
-			"proficiencyBonus": "",
-			"race": "",
-			"skills": [""],
-			"tendency": "",
-			"treasures": [""],
-			"weapons": [{
-				"attacks": [""],
-				"magics": [""],
-				"bonus": "",
-				"damage": "",
-				"name": ""
+				"othersProficiencies": [""],
+				"proficiencyBonus": "",
+				"race": "",
+				"skills": [""],
+				"tendency": "",
+				"treasures": [""],
+				"weapons": [{
+					"attacks": [""],
+					"magics": [""],
+					"bonus": "",
+					"damage": "",
+					"name": ""
 
-			}],
-			"xp": ""
-		}
-	],
+				}],
+				"xp": ""
+			}
+		]
+	},
 	"magics":[
 	{
 		"level":

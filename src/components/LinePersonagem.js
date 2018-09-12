@@ -3,14 +3,14 @@ import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
 // create a component
-const LinePersonagem = ({ label, value }) => {
+const LinePersonagem = ({ label, value, min }) => {
     return (
         <View style={styles.container}>
             <View>
                 <Text style={styles.textLabel}>{label}: </Text>
             </View>
             <View>
-                <Text style={styles.textValue}>{value}</Text>
+                <Text style={[styles.textValue, min ? styles.textValueMin :null  ]}>{value}</Text>
             </View>
         </View>
     );
@@ -31,6 +31,9 @@ const styles = StyleSheet.create({
         marginLeft: 5,
         fontSize: 16,
         color: '#6d6d6d'
+    },
+    textValueMin: {
+        fontSize: 11
     }
 });
 
