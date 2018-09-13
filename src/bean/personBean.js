@@ -1,11 +1,12 @@
 export class PersonBean {
+    idPerson;
     AlliesAndOrganizations;
     antecedent;
     antecedentTraces = new AntecedentTraces;
     armorClass;
     attributes = new Atributes;
     characteristics = [];
-    class = new Class;
+    class = [];
     displacement;
     equipments = new Equipaments;
     history;

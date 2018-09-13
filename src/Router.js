@@ -1,5 +1,4 @@
 import { React } from 'react';
-import { Image } from 'react-native';
 import { createStackNavigator } from 'react-navigation';
 
 import Login from './pages/Login';
@@ -8,6 +7,7 @@ import Dashboard from './pages/Dashboard';
 
 import { BottomTabNavigator } from './pages/Navigations/bottom/BottomTabNavigation';
 import AddPerson from './pages/person/AddPerson';
+import MenuSandwich from './components/MenuSandwich';
 
 export default createStackNavigator({
     'login': {
@@ -58,8 +58,8 @@ export default createStackNavigator({
         navigationOptions: {
             title: null,
             headerStyle: {
-                height: 0,
-                backgroundColor: '#383838'
+                backgroundColor: '#383838',
+                height: 0
             },            
         }
     },

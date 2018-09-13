@@ -4,6 +4,7 @@ import {
     ScrollView,
     TouchableOpacity,
     Image,
+    Dimensions,
     View,
     ActivityIndicator,
     Modal,
@@ -65,7 +66,12 @@ class AllMagics extends React.Component {
                 <ScrollView contentContainerStyle={styles.contencContainer}>
                     {this.props.all_magics.length > 0 ? 
                         this.props.all_magics.map( (magic, key) => this.renderCardMagic(magic, key) ) :
-                        <ActivityIndicator color = "#d6a200" />}
+                        (<View style={{
+                            height: Dimensions.get('window').height - 100,
+                            justifyContent: 'center',
+                            alignItems: 'center', }}>
+                            <ActivityIndicator size="large" color = "#d6a200" />
+                        </View>)}
                 </ScrollView>
                 <View style={styles.filterContainer}>
                     <TouchableOpacity 

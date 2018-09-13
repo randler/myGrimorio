@@ -37,9 +37,10 @@ class Dashboard extends Component {
     componentWillMount() {
         this.props.getUser();
         this.props.navigation.setParams({logout: this.logout});
+
+        this.getPersonsFirebase();
     }
     componentDidMount() {
-        this.getPersonsFirebase();
     }
     
     getPersonsFirebase() {
@@ -91,7 +92,7 @@ class Dashboard extends Component {
     }
 
     renderDashboard() {
-        if (this.props.persons && this.props.persons.length == 0) {
+        if (this.props.persons && Object.entries(this.props.persons).length == 0) {
             return (<View style={{
                                 height: Dimensions.get('window').height - 100,
                                 justifyContent: 'center',
@@ -99,11 +100,11 @@ class Dashboard extends Component {
                         <ActivityIndicator size="large" color = "#d6a200" />
                     </View>);
         } else if(this.props.persons) {
-            return this.props.persons.map((personagem, key) => (
+            return Object.entries(this.props.persons).map((personagem, key) => (
                     <TouchableOpacity 
                         key={key}
-                        onPress={() => this.props.navigation.navigate('home', {id: personagem.idPerson} )}>
-                        <CardPersonagem personagem={personagem} />
+                        onPress={() => this.props.navigation.replace('home', {id: personagem[0]} )}>
+                        <CardPersonagem personagem={personagem[1]} />
                     </TouchableOpacity>
                 ));
         } else {
@@ -116,7 +117,7 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <View style={[styles.container, (this.props.persons && this.props.persons.length == 0) ? styles.containerNothing : null ]}>
+            <View style={[styles.container, (this.props.persons && Object.entries(this.props.persons).length == 0) ? styles.containerNothing : null ]}>
                 <ScrollView>
                     { this.renderDashboard() }
                 </ScrollView>

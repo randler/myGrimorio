@@ -8,6 +8,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import firebase from 'firebase';
+var uuid = require('react-native-uuid');
 
 import { PersonBean } from '../../bean/personBean';
 
@@ -30,7 +31,7 @@ class AddPerson extends Component {
         var person = this.createInitialPerson();
 
         var userData = firebase.database().ref('persons');
-        userData.child(idUser).set([person]);
+        userData.child(idUser).push(person);
     }
 
     createInitialPerson() {

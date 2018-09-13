@@ -12,11 +12,11 @@ export const HomeTabNavigation = createMaterialTopTabNavigator({
             title: 'Descrição'
         }
     },
-    'tributes': {
+    'Habilitys': {
         screen: Tributes,
         navigationOptions: { 
             header: null,
-            title: 'Atributos'
+            title: 'Habilidades'
         }
     },
     'weapons': {
@@ -34,6 +34,8 @@ export const HomeTabNavigation = createMaterialTopTabNavigator({
             activeTintColor: '#D6A200',
             style: {
                 backgroundColor: '#383838',
+                borderTopWidth: 1,
+                borderTopColor: '#383838',
                 borderBottomWidth: 1,
                 borderBottomColor: '#D6A200',
             }
