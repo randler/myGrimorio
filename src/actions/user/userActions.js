@@ -2,7 +2,7 @@ import firebase from 'firebase';
 import { Alert } from 'react-native';
 
 export const USER_LOGIN_SUCCESS = 'USER_LOGIN_SUCCESS';
-const userLoginSuccess = user =>({
+export const userLoginSuccess = user =>({
     type: USER_LOGIN_SUCCESS,
     user
 });
@@ -41,10 +41,10 @@ export const tryLogout = () => dispatch => {
         .then(() => {
             const action = userLogout();
             dispatch(action);
-            return Promise.resolve();
+            return {logout: true};
         })
         .catch(() => {
-            return Promise.reject();
+            return {logout: false};
         });
 }
 

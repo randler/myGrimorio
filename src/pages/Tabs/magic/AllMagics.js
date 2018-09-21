@@ -3,7 +3,9 @@ import React from 'react';
 import { 
     ScrollView,
     TouchableOpacity,
+    AsyncStorage,
     Image,
+    FlatList,
     Dimensions,
     View,
     ActivityIndicator,
@@ -12,7 +14,7 @@ import {
 } from 'react-native';
 import firebase from 'firebase';
 
-import CardMagic from '../../../components/CardMagic';
+import CardMagic from '../../../components/cards/CardMagic';
 
 import SearchBar from '../../../components/SearchBar';
 import { setMagics } from '../../../actions';
@@ -31,13 +33,30 @@ class AllMagics extends React.Component {
         }
     }
 
-    componentWillMount() {
+    async componentWillMount() {
+        const value = JSON.parse( await AsyncStorage.getItem('@MyGrimorio:magics')) || false;
+
+        if (value) 
+            this.props.setMagics(value);
+        else 
+            this.searchMagicsFirebase();
+    }
+
+    searchMagicsFirebase() {
         firebase.database().ref("magics")
             .on('value', (snapshot) => {
                 const magics = snapshot.val();
-                //this.setState({magics});
                 this.props.setMagics(magics);
+                this._storeData(magics, '@MyGrimorio:magics')
         });
+    }
+
+    _storeData = async (data, store) => {
+        try {
+            await AsyncStorage.setItem(store, JSON.stringify(data));
+        } catch(error) {
+            console.log('error: not was possible persist the user data in phone')
+        }
     }
 
     setSearchMode(visible) {
@@ -50,22 +69,16 @@ class AllMagics extends React.Component {
         }
     }
 
-    renderCardMagic(magic, key) {
-        if(key == 0){
-            return ( <CardMagic key={key} first magic = { magic } /> );
-        } else if( key == (this.props.all_magics.length - 1)) {
-            return ( <CardMagic key={key} last magic = { magic } /> );
-        }
-        return ( <CardMagic key={key} magic = { magic } /> );
-    }
-
     render() {
         return (
             <View style={styles.container}>
                 { this.renderSearch() }
                 <ScrollView contentContainerStyle={styles.contencContainer}>
-                    {this.props.all_magics.length > 0 ? 
-                        this.props.all_magics.map( (magic, key) => this.renderCardMagic(magic, key) ) :
+                    {this.props.all_magics.length > 0 ?
+                    <FlatList 
+                        data={this.props.all_magics}
+                        keyExtractor={item => item.name}
+                        renderItem={({item}) => <CardMagic magic = { item } />} /> :
                         (<View style={{
                             height: Dimensions.get('window').height - 100,
                             justifyContent: 'center',

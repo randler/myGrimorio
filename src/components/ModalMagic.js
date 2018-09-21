@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import HTML from 'react-native-render-html';
 
-import LineMagic from './LineMagic';
+import LineMagic from './lines/LineMagic';
 
 const CLOSE_ICON = require('../../resources/img/close_icon.png');
 
@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
         borderLeftWidth: 1,
         borderRightWidth: 1,
         padding: 10,
+        paddingRight: 30,
         borderColor: '#DDD',
     },
     headerModal: {

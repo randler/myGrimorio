@@ -21,23 +21,24 @@ export default function magicReducer (state = INITIAL_STATE, action) {
 
 function search(state, label, value) {
 
-    const magicFound = {magics: []};
-    state.magics.forEach(magic => {
+    const magicFound = [];
+    state.map(magic => {
         switch (label) {
             case 'nome':
                 if (magic.name.toLowerCase().includes(value.toLowerCase())) {
-                    magicFound.magics.push(magic);
+                    magicFound.push(magic);
                 }
                 break;
             case 'nivel':
                 if (magic.level == value) {
-                    magicFound.magics.push(magic);
+                    magicFound.push(magic);
                 }
                 break;
             case 'classe':
-                magic.classes.forEach(classe => {
+            if (magic.classes)
+                magic.classes.map(classe => {
                    if (classe.includes(value)) {
-                    magicFound.magics.push(magic);
+                    magicFound.push(magic);
                    } 
                 });
                 break;

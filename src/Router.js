@@ -1,5 +1,5 @@
 import { React } from 'react';
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator} from 'react-navigation';
 
 import Login from './pages/Login';
 import Register from './pages/Register';
@@ -7,7 +7,6 @@ import Dashboard from './pages/Dashboard';
 
 import { BottomTabNavigator } from './pages/Navigations/bottom/BottomTabNavigation';
 import AddPerson from './pages/person/AddPerson';
-import MenuSandwich from './components/MenuSandwich';
 
 export default createStackNavigator({
     'login': {
@@ -76,6 +75,7 @@ export default createStackNavigator({
                 color: '#FFFFFF',
                 fontSize: 25,
                 marginLeft: 80,
+                //fontFamily: 'Lobster-Regular',
                 flex: 1,
                 textAlign: 'center',
                 marginBottom: 5, 

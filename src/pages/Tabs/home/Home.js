@@ -11,7 +11,7 @@ import {
 import { connect } from 'react-redux';
 import { firebase } from 'firebase';
 
-import DescText from '../../../components/DescText';
+import LineDescPerson from '../../../components/lines/LineDescPerson';
 import Traces from '../../../components/Traces';
 
 import { getPerson } from '../../../actions';
@@ -48,11 +48,11 @@ class Home extends React.Component {
                     <View style={styles.containerHeader}>
                         <View style={styles.containerDesc}>
                                 <Text style={styles.name}>{person[1].name}</Text>
-                                <DescText label='Classe' value={this.getClassName(person[1].class)} />
-                                <DescText label='Raça' value={person[1].race} />
-                                <DescText label='Tendência' value={person[1].tendency} />
-                                <DescText label='Antecedente' value={person[1].antecedent} />
-                                <DescText label='XP' value={person[1].xp} last />
+                                <LineDescPerson label='Classe' value={this.getClassName(person[1].class)} />
+                                <LineDescPerson label='Raça' value={person[1].race} />
+                                <LineDescPerson label='Tendência' value={person[1].tendency} />
+                                <LineDescPerson label='Antecedente' value={person[1].antecedent} />
+                                <LineDescPerson label='XP' value={person[1].xp} last />
                         
                             </View>  
                             <View style={styles.containerImage}>

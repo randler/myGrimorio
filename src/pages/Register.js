@@ -10,8 +10,8 @@ import {
     TextInput
 } from 'react-native';
 
-import CardForm from '../components/CardForm';
-import FormRow from '../components/FormRow';
+import CardForm from '../components/cards/CardForm';
+import FormRow from '../components/forms/FormRow';
 
 import { connect } from 'react-redux';
 import { tryRegister } from '../actions';

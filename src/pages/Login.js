@@ -14,11 +14,11 @@ import {
 
 import { connect } from 'react-redux';
 
-import CardForm from '../components/CardForm';
-import CardFormFooter from '../components/CardFormFooter';
-import FormRow from '../components/FormRow';
+import CardForm from '../components/cards/CardForm';
+import CardFormFooter from '../components/cards/CardFormFooter';
+import FormRow from '../components/forms/FormRow';
 
-import { tryLogin } from '../actions';
+import { tryLogin, userLoginSuccess  } from '../actions';
 
 const bookBackground = require('../../resources/img/book.jpg');
 const LOGO = require('../../resources/img/5ered.png');
@@ -61,21 +61,20 @@ class Login extends React.Component {
 
     _storeData = async (user) => {
         try {
-            await AsyncStorage.setItem('@MyGrimorio:login', JSON.stringify([user]));
+            await AsyncStorage.setItem('@MyGrimorio:login', JSON.stringify(user));
         } catch(error) {
             console.log('error: not was possible persist the user data in phone')
         }
     }
     _retrieveData = async () => {
         try {
-            const value = JSON.parse( await AsyncStorage.getItem('@MyGrimorio:login')) || [];
+            const value = JSON.parse( await AsyncStorage.getItem('@MyGrimorio:login')) || false;
+            const expiration = value.user.stsTokenManager.expirationTime;
             
-            if (value.length > 0) {
-                this.setState({
-                    mail: value[0].email, 
-                    password: value[0].password
-                });
-                this.logar(value[0].email, value[0].password)
+            if (value && (Date.now() < expiration)) {
+                this.props.userLoginSuccess(value);
+                return this.props.navigation.replace('dashboard');
+                //this.logar(value[0].email, value[0].password);
             }
         } catch (error) {
             return null;
@@ -94,8 +93,8 @@ class Login extends React.Component {
         this.props.tryLogin({email, password})
             .then((user) => {
                 if (user){
-                    this._storeData({email, password});
-                    
+                    user.password = password;
+                    this._storeData(user);                    
                     return this.props.navigation.replace('dashboard');
                 }
 
@@ -243,7 +242,9 @@ const styles = StyleSheet.create({
 });
 
 const mapDispatchToProps = {
-    tryLogin
+    tryLogin,
+    userLoginSuccess,
+    
 }
 
 //make this component available to the app

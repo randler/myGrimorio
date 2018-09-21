@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { 
     ScrollView,
     ActivityIndicator,
+    AsyncStorage,
     View,
     Text,
     Image,
@@ -16,7 +17,7 @@ import firebase from 'firebase';
 import { connect } from 'react-redux';
 import { tryLogout, setPersons, getUser } from '../actions';
 
-import CardPersonagem from '../components/CardPersonagem';
+import CardPersonagem from '../components/cards/CardPersonagem';
 import AddPersonagem from '../components/AddPersonagem';
 
 const LOGOUT    = require('../../resources/img/logout.png');
@@ -28,8 +29,13 @@ class Dashboard extends Component {
     constructor(props) {
         super(props);
 
+        console.ignoredYellowBox = [
+            'Setting a timer'
+        ];
+
         this.state = {
-            idUser: ''
+            idUser: '',
+            dataStorage: true
         }
 
     }
@@ -37,16 +43,31 @@ class Dashboard extends Component {
     componentWillMount() {
         this.props.getUser();
         this.props.navigation.setParams({logout: this.logout});
+        this.getPersonsFireBase();
+    }
 
-        this.getPersonsFirebase();
+    _storeData = async (data, store) => {
+        try {
+            await AsyncStorage.setItem(store, JSON.stringify(data));
+        } catch(error) {
+            console.log('error: not was possible persist the user data in phone')
+        }
     }
-    componentDidMount() {
+    _removeData = async (store) => {
+        try {
+            await AsyncStorage.removeItem(store);
+        } catch(error) {
+            console.log('error: not was possible persist the user data in phone')
+        }
     }
-    
-    getPersonsFirebase() {
+
+    getPersonsFireBase() {
         const idUser = this.props.user.user.uid;
-        this.setState({idUser});
-        var persons = firebase.database().ref('persons').child('' + idUser);
+    
+        var persons = firebase.database()
+                                .ref('persons')
+                                .child('' + idUser);
+        
         persons.on('value', (snapshot) => {
             const person = snapshot.val();
             this.props.setPersons(person);
@@ -83,7 +104,7 @@ class Dashboard extends Component {
     logout =() => {
         this.props.tryLogout()
             .then(() => {
-                this._storeData([]);
+                this._removeData('@MyGrimorio:login');
                 this.props.navigation.replace('login');
             })
             .catch( () => {
