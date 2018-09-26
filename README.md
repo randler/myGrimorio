@@ -1,8 +1,14 @@
 ## Aplicação (Ainda em construção)
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
-![alt text](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-17.png)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-25.png)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-46.png)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-02.png)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-09.png)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-19.png)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-27.png)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-35.png)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-45.png)
+
 
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
