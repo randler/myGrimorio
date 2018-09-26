@@ -3,6 +3,7 @@ import React from 'react';
 import { 
     View,
     AsyncStorage,
+    Alert,
     KeyboardAvoidingView,
     StyleSheet,
     ActivityIndicator,
@@ -71,10 +72,17 @@ class Login extends React.Component {
             const value = JSON.parse( await AsyncStorage.getItem('@MyGrimorio:login')) || false;
             const expiration = value.user.stsTokenManager.expirationTime;
             
-            if (value && (Date.now() < expiration)) {
-                this.props.userLoginSuccess(value);
-                return this.props.navigation.replace('dashboard');
-                //this.logar(value[0].email, value[0].password);
+            if (value) {
+                if(Date.now() > expiration) {
+                    this.logar(value.user.email, value.password)
+                } else {
+                    this.setState({
+                        mail: value.user.email,
+                        password: value.password
+                    });
+                    this.props.userLoginSuccess(value);
+                    return this.props.navigation.replace('dashboard');
+                }
             }
         } catch (error) {
             return null;
@@ -120,7 +128,7 @@ class Login extends React.Component {
             case 'auth/wrong-password':
                 return 'Senha e/ou Email incorreto(s)';
             case 'auth/network-request-failed':
-                return 'Não consigo conectar :(';
+                return Alert.alert('Falha na conexão', 'Não consigo acessar a internet. Verifique a sua conexão e tente novamente.');
             default:
                 return errorCode;
         }

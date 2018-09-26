@@ -2,6 +2,7 @@
 import React from 'react';
 import { 
     ScrollView,
+    Alert,
     TouchableOpacity,
     AsyncStorage,
     Image,
@@ -9,7 +10,6 @@ import {
     Dimensions,
     View,
     ActivityIndicator,
-    Modal,
     StyleSheet 
 } from 'react-native';
 import firebase from 'firebase';
@@ -58,6 +58,7 @@ class AllMagics extends React.Component {
             console.log('error: not was possible persist the user data in phone')
         }
     }
+
 
     setSearchMode(visible) {
         this.setState({searchMode: visible});

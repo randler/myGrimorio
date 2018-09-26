@@ -25,7 +25,7 @@ const ModalMagic = ({magic, setVisible}) => {
                 </TouchableOpacity>
             </View>
             <ScrollView style={styles.containerModal}>
-                <View style={[styles.modalDefault, styles.headerModal]}>
+                <View style={styles.modalDefault}>
                     <Text style={styles.name}>{ magic.name }</Text>
                     <Text style={styles.TextHeader}>{ magic.level }º nível de {magic.school.pt} {magic.concentration ? '(Concentração)' : magic.ritual ? '(Ritual)' : '' }</Text>
                     <LineMagic label="Conjuradores:" value={ magic.classes.map(classe => (` ${classe} |`)) } textHeader />
@@ -35,7 +35,7 @@ const ModalMagic = ({magic, setVisible}) => {
                     <LineMagic label="Alcance:" value={ magic.range } />
                     <LineMagic label="Componentes:" value={ magic.components } />
                     <LineMagic label="Duração:" value={ magic.duration } last />
-                    <HTML html={ magic.description } imagesMaxWidth={Dimensions.get('window').width} />
+                    <HTML html={ magic.description } staticContentMaxWidth={Dimensions.get('window').width - 5} />
                 </View>
                 <View style={[styles.modalDefault, styles.footerModal]}>
                     <Text>Fonte: { magic.nome }</Text>
@@ -50,11 +50,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         margin: 20,
-        padding: 5,
         borderRadius: 5,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#D6A200',
+        borderWidth: 3,
+        borderColor: '#D6A200',
     },
     name: {
         fontSize: 20,
@@ -75,8 +75,8 @@ const styles = StyleSheet.create({
         zIndex: 10
     },
     iconClose: {
-        width: 20,
-        height: 20,
+        width: 25,
+        height: 25,
     },
     modalDefault: {
         backgroundColor: '#FFF',
@@ -87,11 +87,7 @@ const styles = StyleSheet.create({
         paddingRight: 30,
         borderColor: '#DDD',
     },
-    headerModal: {
-        borderTopLeftRadius: 5,
-        borderTopRightRadius: 5,
-    },
-    bodyModal:{
+    flexModal:{
         flex: 1,
     },
     footerModal: {

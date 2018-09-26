@@ -13,3 +13,10 @@ export const getPerson = (id) => {
         id
     }
 } 
+
+export const GET_ID_PERSON = 'GET_ID_PERSON';
+export const getIdPerson = () => {
+    return {
+        type: GET_ID_PERSON
+    }
+} 

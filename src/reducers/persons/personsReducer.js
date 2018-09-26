@@ -1,4 +1,4 @@
-import { SET_PERSONS, GET_PERSON } from '../../actions';
+import { SET_PERSONS, GET_PERSON, GET_ID_PERSON } from '../../actions';
 
 const INITIAL_STATE = {};
 
@@ -9,6 +9,8 @@ export default function personsReducer (state = INITIAL_STATE, action) {
         case GET_PERSON:
             const persons = searchPerson(state, action.id);
             return persons;
+        case GET_ID_PERSON:
+            return state;
         default:
             return state;
     }

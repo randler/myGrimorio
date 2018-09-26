@@ -41,8 +41,21 @@ class SearchBar extends React.Component {
         this.setState({
             [label]: value
         });
+
+        //this.props.searchMagic(label, value);
+    }
+    componentDidUpdate() {
+        this.search();
+    }
+
+    search() {
+         const valueSearch = {
+            name: this.state.nome       == ''       ? null : this.state.nome,
+            level: this.state.nivel     == 'Todas'  ? null : this.state.nivel,
+            classe: this.state.classe   == 'Todas'  ? null : this.state.classe
+        };
         
-        this.props.searchMagic(label, value);
+        this.props.searchMagic(valueSearch); 
     }
 
     niveis() {
@@ -63,7 +76,7 @@ class SearchBar extends React.Component {
     render() {
         return (
             <View style={styles.container}>
-                <View style={styles.containerSearch}>
+                <View style={styles.row}>
                     <Text style={styles.textLabel}>Nome: </Text>
                     <TextInput 
                         style={styles.input}
@@ -73,7 +86,7 @@ class SearchBar extends React.Component {
                         onChangeText={ nome => this.setField('nome', nome)}
                     />
                 </View>
-                <View style={styles.containerSearch}>
+                <View style={styles.row}>
                     <Text style={[styles.textLabel, styles.textLabelPicker]}>Nível: </Text>
                     <Picker
                         style={[styles.picker, styles.pickerNivel]}
@@ -92,9 +105,9 @@ class SearchBar extends React.Component {
                             { this.classes() }
                     </Picker>
                 </View>
-                <View style={styles.containerSearch}>
+                <View style={styles.row}>
                     <TouchableHighlight
-                        style={styles.btnClearFilter}
+                        style={[styles.btnFilter, styles.btnClearFilter]}
                         onPress={ () => this.clearState() }
                         underlayColor='rgba(214, 162, 0, 0.3)'>
                         <Text style={styles.txtClearFilter}>Limpar Filtros</Text>
@@ -115,18 +128,19 @@ const styles = StyleSheet.create({
         padding: 5,
         backgroundColor: '#FFF',
     },
-    containerSearch: {
+    row: {
         flexDirection: 'row',
     },
-    btnClearFilter: {
-        width: Dimensions.get('window').width - 50,
-        marginHorizontal: 20,
-        backgroundColor: '#383838',
+    btnFilter: {
+        marginHorizontal: 2,
         padding: 5,
         borderRadius: 3,
     },
+    btnClearFilter: {
+        backgroundColor: '#383838',
+    },
     txtClearFilter: {
-        color: '#FFF',
+        color: '#383838',
         fontSize: 15,
         alignSelf: 'center',
     },

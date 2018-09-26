@@ -7,7 +7,7 @@ const INITIAL_STATE = [];
 export default function magicReducer (state = INITIAL_STATE, action) {
     switch (action.type) {
         case SEARCH_MAGIC:
-            const magicFound = search(state, action.label, action.value);
+            const magicFound = search(action.value);
             return magicFound;
         case CLEAR_FILTER: 
             return INITIAL_STATE;
@@ -19,30 +19,43 @@ export default function magicReducer (state = INITIAL_STATE, action) {
     }
 }
 
-function search(state, label, value) {
+function search(value) {
 
-    const magicFound = [];
-    state.map(magic => {
-        switch (label) {
-            case 'nome':
-                if (magic.name.toLowerCase().includes(value.toLowerCase())) {
-                    magicFound.push(magic);
-                }
-                break;
-            case 'nivel':
-                if (magic.level == value) {
-                    magicFound.push(magic);
-                }
-                break;
-            case 'classe':
-            if (magic.classes)
-                magic.classes.map(classe => {
-                   if (classe.includes(value)) {
-                    magicFound.push(magic);
-                   } 
-                });
-                break;
-        }
-    });
+    if (!value.name && !value.level && !value.classe)
+        return INITIAL_STATE;
+    
+    let magicFound = INITIAL_STATE.filter(magic => {
+        console.log(magic.classes);
+        if ((value.name && magic.name.toLowerCase().includes(value.name.toLowerCase())) && 
+            (value.level && magic.level == value.level) &&
+            (value.classe && magic.classes.contains(value.classe)))
+                return true;
+        else if ((value.name && magic.name.toLowerCase().includes(value.name.toLowerCase())) && 
+                (value.level && magic.level == value.level) &&
+                !value.classe )
+                    return true;
+        else if (!value.name && 
+                (value.level && magic.level == value.level) &&
+                (value.classe && magic.classes.contains(value.classe)))
+                    return true;
+        else if (!value.name  && 
+                (value.level && magic.level == value.level) &&
+                !value.classe )
+                    return true;
+        else if ((value.name && magic.name.toLowerCase().includes(value.name.toLowerCase())) && 
+                !value.level &&
+                !value.classe)
+                    return true;
+        else if (!value.name  && 
+                !value.level  &&
+                (value.classe && magic.classes.contains(value.classe)))
+                    return true;
+        else if ((value.name && magic.name.toLowerCase().includes(value.name.toLowerCase())) && 
+                !value.level &&
+                (value.classe && magic.classes.contains(value.classe)))
+                    return true;
+        else 
+            return false
+    })
     return magicFound;
 }

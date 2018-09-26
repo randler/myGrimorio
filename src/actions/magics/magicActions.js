@@ -1,10 +1,10 @@
 import firebase from 'firebase';
+import { Alert } from 'react-native';
 
 export const SEARCH_MAGIC = 'SEARCH_MAGIC';
-export const searchMagic = (label, value) => {
+export const searchMagic =  value => {
     return {
         type: SEARCH_MAGIC,
-        label,
         value
     }
 };
@@ -28,3 +28,31 @@ export const setMagics = magics => {
         magics
     }
 };
+
+export const saveMyMagic = (magic, person) => {
+
+    const idPerson = Object.keys(person)[0];
+    const { currentUser } = firebase.auth();
+    let magias;
+    return async dispatch => {
+        await firebase.database()
+            .ref(`persons/${currentUser.uid}/${idPerson}/myMagics`)
+            .on('value', (snapshot) => {
+                magias = snapshot.val();
+                
+            });
+        if(magias){
+            magias.filter( value => {
+                if (value.name === magic.name)
+                    return Alert.alert('Oops', 'Essa magia já existe em seu grimório!')
+            });
+            magias = [...magias, magic];
+        } else
+            magias = [magic];
+
+        await firebase.database()
+            .ref(`persons/${currentUser.uid}/${idPerson}/myMagics`)
+            .set(magias);
+        }
+    
+}

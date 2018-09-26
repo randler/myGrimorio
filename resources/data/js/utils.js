@@ -29,17 +29,20 @@ export const getBonusProficiencia = nivelTotal => {
         case '18':
         case '19':
         case '20':
+            return '+6';
         case '21':
         case '22':
         case '23':
         case '24':
         case '25':
+            return '+7';
         case '26':
         case '27':
         case '28':
         case '29':
+            return '+8';
         case '30':
-            return '+6';
+            return '+9';
         default:
             return '+2';
     }
