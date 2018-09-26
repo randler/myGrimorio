@@ -1,13 +1,13 @@
 ## Aplicação (Ainda em construção)
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-17.png) {:height=100}
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-25.png) {:height=100}
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-46.png) {:height=100}
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-02.png) {:height=100}
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-09.png) {:height=100}
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-19.png) {:height=100}
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-27.png) {:height=100}
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-35.png) {:height=100}
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-45.png) {:height=100}
+![Login](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-17.png =100)
+![Register](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-25.png =100)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-46.png =100)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-02.png =100)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-09.png =100)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-19.png =100)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-27.png =100)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-35.png =100)
+![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-45.png =100)
 
 
 
