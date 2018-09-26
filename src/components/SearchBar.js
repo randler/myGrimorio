@@ -105,14 +105,6 @@ class SearchBar extends React.Component {
                             { this.classes() }
                     </Picker>
                 </View>
-                <View style={styles.row}>
-                    <TouchableHighlight
-                        style={[styles.btnFilter, styles.btnClearFilter]}
-                        onPress={ () => this.clearState() }
-                        underlayColor='rgba(214, 162, 0, 0.3)'>
-                        <Text style={styles.txtClearFilter}>Limpar Filtros</Text>
-                    </TouchableHighlight>
-                </View>
             </View>
         );
     }
@@ -124,25 +116,12 @@ const styles = StyleSheet.create({
         width: '100%',
         borderBottomWidth: 2,
         borderBottomColor: '#D6A200',
-        height: 140,
+        height: 110,
         padding: 5,
         backgroundColor: '#FFF',
     },
     row: {
         flexDirection: 'row',
-    },
-    btnFilter: {
-        marginHorizontal: 2,
-        padding: 5,
-        borderRadius: 3,
-    },
-    btnClearFilter: {
-        backgroundColor: '#383838',
-    },
-    txtClearFilter: {
-        color: '#383838',
-        fontSize: 15,
-        alignSelf: 'center',
     },
     textLabel:{
         marginTop: 8,

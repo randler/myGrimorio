@@ -25,34 +25,37 @@ function search(value) {
         return INITIAL_STATE;
     
     let magicFound = INITIAL_STATE.filter(magic => {
-        console.log(magic.classes);
-        if ((value.name && magic.name.toLowerCase().includes(value.name.toLowerCase())) && 
-            (value.level && magic.level == value.level) &&
-            (value.classe && magic.classes.contains(value.classe)))
+            magicClass = (value.classe && magic.classes && magic.classes.indexOf(value.classe) > -1) ? true : false;
+            magicName = (value.name && magic.name.toLowerCase().indexOf(value.name.toLowerCase()) > -1) ? true : false;
+            magicLevel = (value.level && magic.level == value.level) ? true: false;
+
+        if ((value.name && magicName) && 
+            (value.level && magicLevel) &&
+            (value.classe && magicClass))
                 return true;
-        else if ((value.name && magic.name.toLowerCase().includes(value.name.toLowerCase())) && 
-                (value.level && magic.level == value.level) &&
+        else if ((value.name && magicName) && 
+                (value.level && magicLevel) &&
                 !value.classe )
                     return true;
         else if (!value.name && 
-                (value.level && magic.level == value.level) &&
-                (value.classe && magic.classes.contains(value.classe)))
+                (value.level && magicLevel) &&
+                (value.classe && magicClass))
                     return true;
         else if (!value.name  && 
-                (value.level && magic.level == value.level) &&
+                (value.level && magicLevel) &&
                 !value.classe )
                     return true;
-        else if ((value.name && magic.name.toLowerCase().includes(value.name.toLowerCase())) && 
+        else if ((value.name && magicName) && 
                 !value.level &&
                 !value.classe)
                     return true;
         else if (!value.name  && 
                 !value.level  &&
-                (value.classe && magic.classes.contains(value.classe)))
+                (value.classe && magicClass))
                     return true;
-        else if ((value.name && magic.name.toLowerCase().includes(value.name.toLowerCase())) && 
+        else if ((value.name && magicName) && 
                 !value.level &&
-                (value.classe && magic.classes.contains(value.classe)))
+                (value.classe && magicClass))
                     return true;
         else 
             return false
