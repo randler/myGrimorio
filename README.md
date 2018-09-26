@@ -1,21 +1,21 @@
 ## Aplicação (Ainda em construção)
-![Login](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-17.png) {:height="100" width="61"}
+![Login](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-17.png) 
 
-![Register](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-25.png) {:height="100" width="61"}
+![Register](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-25.png) 
 
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-46.png) {:height="100" width="61"}
+![Meus Personagens](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-46.png) 
 
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-02.png) {:height="100" width="61"}
+![Novo Personagem parte 1](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-02.png) 
 
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-09.png) {:height="100" width="61"}
+![Novo personagem parte 2](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-09.png) 
 
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-19.png) {:height="100" width="61"}
+![Descrição do personagem](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-19.png) 
 
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-27.png) {:height="100" width="61"}
+![Minhas magias](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-27.png) 
 
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-35.png) {:height="100" width="61"}
+![Todas as magias](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-35.png) 
 
-![alt text](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-45.png) {:height="100" width="61"}
+![Descrição de uma magia](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-45.png) 
 
 
 
