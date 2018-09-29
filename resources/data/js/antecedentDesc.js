@@ -3,4 +3,5 @@ export default antecedentes = {
     acolito: 'Acólito',    
     artesaoGuilda: 'Artesão de Guilda',
     artista: 'Artista',
+    eremita: 'Eremita'
 };

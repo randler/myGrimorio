@@ -338,6 +338,8 @@ class AddPerson extends Component {
 
         var person = createPerson(this.state);
 
+        console.log(person);
+
         var userData = firebase.database().ref('persons');
         userData.child(idUser).push(person);
     }

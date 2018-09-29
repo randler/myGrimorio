@@ -2,6 +2,7 @@
 import React from 'react';
 import { 
     ScrollView,
+    RefreshControl,
     Alert,
     TouchableOpacity,
     AsyncStorage,
@@ -29,7 +30,8 @@ class AllMagics extends React.Component {
         super(props);
 
         this.state = {
-            searchMode: false
+            searchMode: false,
+            refreshing: false
         }
     }
 
@@ -74,7 +76,19 @@ class AllMagics extends React.Component {
         return (
             <View style={styles.container}>
                 { this.renderSearch() }
-                <ScrollView contentContainerStyle={styles.contencContainer}>
+                <ScrollView 
+                    contentContainerStyle={styles.contencContainer}
+                    refreshControl={<RefreshControl 
+                                        colors={[
+                                            '#5B4500', 
+                                            '#967101', 
+                                            '#bf9003', 
+                                            '#D6A200',
+                                            '#eab100', 
+                                            '#383838']} 
+                                        tintColor={'#D6A200'} 
+                                        refreshing={this.state.refreshing}  
+                                        onRefresh={() => this.searchMagicsFirebase()} />}>
                     {this.props.all_magics.length > 0 ?
                     <FlatList 
                         data={this.props.all_magics}

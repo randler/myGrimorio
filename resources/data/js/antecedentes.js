@@ -106,5 +106,51 @@ export default antecedentes = {
             '',
             ''
         ]
+    },
+    "Eremita": {
+        personalidade: [
+            'Eu fiquei tanto tempo isolado que raramente falo, preferindo gestos e grunhidos ocasionais.',
+            'Eu sou absurdamente sereno, mesmo em face do desespero.',
+            'O líder da minha comunidade tem algo sábio a dizer sobre cada tópico, eu estou ansioso para partilhar dessa sabedoria.',
+            'Eu sinto uma empatia tremenda por todos que sofrem.',
+            'Eu estou alheio a etiqueta e expectativas sociais.',
+            'Eu relaciono tudo que acontece comigo a um grande plano cósmico.',
+            'Eu, muitas vezes, me perco em meus pensamentos e contemplação me tornando alheio ao meu redor.',
+            'Eu estou trabalhando em uma grande teoria filosófica e adoro partilhar minhas ideias.'
+        ],
+        ideais: [
+            'Bem Maior. Meus dons devem ser partilhados com todos, não usados em benefício próprio (Bom)',
+            'Lógica. Emoções não podem obscurecer meus sentidos do que é certo e verdade, ou meu pensamento lógico. (Leal)',
+            'Pensamento Livre. Questionamentos e curiosidade são os pilares do progresso. (Caótico)',
+            'Poder. Isolamento e contemplação são caminhos para poderes místicos e mágicos. (Mau)',
+            'Viva e Deixe Viver. Se intrometer nos assuntos dos outros só traz problemas. (Neutro)',
+            'Autoconhecimento. Se você conhece a si mesmo, não a mais nada para saber. (Qualquer)'
+        ],
+        vinculo: [
+            'Nada é mais importante que os outros membros do eremitério, ordem ou associação.',
+            'Eu entrei em reclusão para me esconder daqueles que ainda devem estar me caçando. Algum dia irei confrontá-los.',
+            'Eu ainda busco o esclarecimento que eu perseguia durante meu isolamento e continuo a me iludir.',
+            'Eu entrei em reclusão porque eu amava alguém que eu não podia ter.',
+            'Se minha descoberta vir à tona, ela poderá trazer destruição ao mundo.',
+            'Meu isolamento me deu grande discernimento sobre um grande mal que apenas eu posso destruir.'
+        ],
+        defeito: [
+            'Agora que voltei ao mundo, eu desfruto de seus prazeres um pouco demais.',
+            'Eu escondo nas sombras, pensamentos sanguinários que meu isolamento e meditação não conseguiram apagar.',
+            'Eu sou dogmático em meus pensamentos e filosofia.',
+            'Eu deixo meu desejo de vencer discussões ofuscar amizades e harmonia.',
+            'Eu me arrisco muito para descobrir um pouco de conhecimento perdido.',
+            'Eu gosto de guardar segredos e não os partilho com ninguém.'
+        ],
+        isolamento: [
+            'Eu estava em busca de esclarecimento espiritual.',
+            'Eu estava participando da vida comunal de acordo com os ditames de uma ordem religiosa.',
+            'Eu fui exilado por um crime que não cometi.',
+            'Eu me afastei da sociedade após um evento que mudou minha vida.',
+            'Eu precisava de um lugar tranquilo para trabalhar minha arte, literatura, música ou manifesto.',
+            'Eu precisava comungar com a natureza, longe da civilização.',
+            'Eu era o guardião de uma ruina ou relíquia antiga.',
+            'Eu era um peregrino em busca de uma pessoa, lugar ou relíquia de grande significância espiritual.'
+        ]
     }
 };

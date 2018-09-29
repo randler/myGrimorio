@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { 
     ScrollView,
+    RefreshControl,
     ActivityIndicator,
     AsyncStorage,
     View,
@@ -35,13 +36,13 @@ class Dashboard extends Component {
 
         this.state = {
             idUser: '',
-            dataStorage: true
+            dataStorage: true,
+            refreshing: false,
         }
 
     }
 
     componentWillMount() {
-        this.props.getUser();
         this.props.navigation.setParams({logout: this.logout});
         this.getPersonsFireBase();
     }
@@ -68,7 +69,7 @@ class Dashboard extends Component {
                                 .ref('persons')
                                 .child('' + idUser);
         
-        persons.on('value', (snapshot) => {
+        persons.once('value', (snapshot) => {
             const person = snapshot.val();
             this.props.setPersons(person);
         });
@@ -112,6 +113,11 @@ class Dashboard extends Component {
             });
     }
 
+    navigateToPerson(id) {
+        this._storeData(id, '@MyGrimorio:idPerson');
+        this.props.navigation.replace('home');
+    }
+
     renderDashboard() {
         if (this.props.persons && Object.entries(this.props.persons).length == 0) {
             return (<View style={{
@@ -124,7 +130,7 @@ class Dashboard extends Component {
             return Object.entries(this.props.persons).map((personagem, key) => (
                     <TouchableOpacity 
                         key={key}
-                        onPress={() => this.props.navigation.replace('home', {id: personagem[0]} )}>
+                        onPress={() => this.navigateToPerson(personagem[0])}>
                         <CardPersonagem personagem={personagem[1]} />
                     </TouchableOpacity>
                 ));
@@ -139,7 +145,21 @@ class Dashboard extends Component {
     render() {
         return (
             <View style={[styles.container, (this.props.persons && Object.entries(this.props.persons).length == 0) ? styles.containerNothing : null ]}>
-                <ScrollView>
+                <ScrollView
+                    refreshControl={
+                        <RefreshControl 
+                            colors={[
+                                '#5B4500',
+                                '#967101',
+                                '#bf9003',
+                                '#D6A200',
+                                '#eab100',
+                                '#383838']}
+                            tintColor={'#D6A200'} 
+                            refreshing={this.state.refreshing}  
+                            onRefresh={() => this.getPersonsFireBase()} 
+                        />
+                    }>
                     { this.renderDashboard() }
                 </ScrollView>
                 <AddPersonagem addPersonagem={() => this.props.navigation.navigate('addPerson') } />

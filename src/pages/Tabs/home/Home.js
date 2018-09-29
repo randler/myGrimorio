@@ -1,6 +1,7 @@
 //import liraries
 import React from 'react';
-import { 
+import {
+    AsyncStorage,
     View,
     ScrollView,
     TouchableOpacity,
@@ -23,10 +24,24 @@ class Home extends React.Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            id: ''
+        }
     }
 
-    componentWillMount() {
-        this.props.getPerson(this.props.navigation.getParam('id'));
+    _retrieveID = async () => {
+        try {
+            const value = JSON.parse( await AsyncStorage.getItem('@MyGrimorio:idPerson')) || false;
+            this.setState({id: value});
+        } catch (error) {
+            return null;
+        }
+    }
+
+    async componentWillMount() {
+        await this._retrieveID();
+        this.props.getPerson(this.state.id);
+        
         /*firebase.database().ref("persons")
             .on('value', (snapshot) => {
                 const persons = snapshot.val();

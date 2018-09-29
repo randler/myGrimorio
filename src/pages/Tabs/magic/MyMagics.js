@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import {
     View,
     ActivityIndicator,
+    SectionList,
+    RefreshControl,
     FlatList,
     Text,
     ScrollView,
@@ -11,23 +13,49 @@ import {
 } from 'react-native';
 
 import { connect } from 'react-redux';
+import { getMyMagics } from '../../../actions'
 
 import CardMagic from '../../../components/cards/CardMagic';
 
 // create a component
 class MyMagics extends Component {
 
-    getPerson() {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            magics: [],
+            refreshing: false
+        }
+    }
+
+    async componentWillMount() {
+        this.getMyMagics();
+    }
+
+    async getMyMagics() {
+        const keyPerson = this.getKeyPerson();
+        const magics = await this.props.getMyMagics(keyPerson);
+        this.setState({magics});
+    }
+
+    getKeyPerson() {
         const arrayPerson = Object.entries(this.props.persons)[0];
-        return arrayPerson[1];
+        return arrayPerson[0];
     }
 
     renderMagics() {
-        const person = this.getPerson();
-        if(person.myMagics) {
-            if(person.myMagics.length) {
-                return (<FlatList 
-                        data={this.getMagics()}
+        if(this.state.magics) {
+            if(this.state.magics.length > 0) {
+                return (
+                    /*<SectionList
+                        renderItem={({item, index}) => (<CardMagic myMagic={true} magic = { item } />)}
+                        renderSectionHeader={section => <SectionListHeader section={section} />}
+                        sections={person}
+                        keyExtractor={item => item.name}                        
+                    > </SectionList>);*/
+                    <FlatList 
+                        data={this.state.magics}
                         keyExtractor={item => item.name}
                         renderItem={({item}) => <CardMagic myMagic={true} magic = { item } />} />);
             } else {
@@ -43,30 +71,20 @@ class MyMagics extends Component {
                         padding: 8,
                         justifyContent: 'center',
                         alignItems: 'center', }}>
-                        <Text style={styles.nothingMagics}>Não tem nenhuma magia em seu Grimório</Text>
+                        <Text style={styles.nothingMagics}>Sem magias no Grimório</Text>
                     </View>)
         }
-    }
-
-    getMagics() {
-        const person = this.getPerson();
-        return person.myMagics;
     }
 
     render() {
         return (
             
             <View style={styles.container}>
-                <ScrollView contentContainerStyle={styles.contentContainer}>
+                <ScrollView 
+                    contentContainerStyle={styles.contentContainer}
+                    refreshControl={<RefreshControl colors={['#5B4500', '#967101', '#bf9003', '#D6A200','#eab100', '#383838']} tintColor={'#D6A200'} refreshing={this.state.refreshing}  onRefresh={() => this.getMyMagics()} />}>
                     {this.renderMagics()}
-                </ScrollView>
-                {/*<View style={styles.filterContainer}>
-                    <TouchableOpacity 
-                        onPress={() => this.setSearchMode(!this.state.searchMode)}>
-                        <Image source={FILTER_ICON} style={styles.filterIcon} />
-                    </TouchableOpacity>
-                </View>*/}
-                
+                </ScrollView>                
             </View>
         );
     }
@@ -89,10 +107,14 @@ const styles = StyleSheet.create({
     }
 });
 
+const mapDispatchToProps = {
+    getMyMagics
+}
+
 const mapStateToProps = state => {
     const { persons } = state;
     return { persons };
 }
 
 //make this component available to the app
-export default connect(mapStateToProps)(MyMagics);
+export default connect(mapStateToProps, mapDispatchToProps)(MyMagics);

@@ -29,6 +29,23 @@ export const setMagics = magics => {
     }
 };
 
+export const getMyMagics = (keyPerson) => {
+    const { currentUser } = firebase.auth();
+    const person = keyPerson;
+    let magias;
+    return async dispatch => {
+        await firebase.database()
+            .ref(`persons/${currentUser.uid}/${person}/myMagics`)
+            .once('value', (snapshot) => {
+                magias = snapshot.val();    
+            });
+            if(magias){
+                return magias;
+            }
+            return null;
+        }
+}
+
 export const saveMyMagic = (magic, person) => {
 
     const idPerson = Object.keys(person)[0];
