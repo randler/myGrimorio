@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {
     View,
     ActivityIndicator,
-    SectionList,
+    Alert,
     RefreshControl,
     FlatList,
     Text,
@@ -13,7 +13,7 @@ import {
 } from 'react-native';
 
 import { connect } from 'react-redux';
-import { getMyMagics } from '../../../actions'
+import { getMyMagics, removeMyMagic } from '../../../actions'
 
 import CardMagic from '../../../components/cards/CardMagic';
 
@@ -44,20 +44,29 @@ class MyMagics extends Component {
         return arrayPerson[0];
     }
 
+    async deleteMagic(magic) {
+        const keyPerson = this.getKeyPerson();
+        await Alert.alert(
+            `Remover "${magic.name}"`, 
+            'Deseja remover essa magia?',
+            [
+                {text: 'Cancelar', onPress: () =>{} },
+                {text: 'Sim', onPress: () => this.props.removeMyMagic(magic, keyPerson)}
+            ],
+            { cancelable: false });
+        this.getMyMagics();
+    }
+
+    
+
     renderMagics() {
         if(this.state.magics) {
             if(this.state.magics.length > 0) {
                 return (
-                    /*<SectionList
-                        renderItem={({item, index}) => (<CardMagic myMagic={true} magic = { item } />)}
-                        renderSectionHeader={section => <SectionListHeader section={section} />}
-                        sections={person}
-                        keyExtractor={item => item.name}                        
-                    > </SectionList>);*/
                     <FlatList 
                         data={this.state.magics}
                         keyExtractor={item => item.name}
-                        renderItem={({item}) => <CardMagic myMagic={true} magic = { item } />} />);
+                        renderItem={({item}) => <CardMagic deleteMagic={(magic) => this.deleteMagic(magic) } myMagic={true}  magic = { item } />} />);
             } else {
                 return (<View style={{
                             height: Dimensions.get('window').height - 100,
@@ -108,7 +117,8 @@ const styles = StyleSheet.create({
 });
 
 const mapDispatchToProps = {
-    getMyMagics
+    getMyMagics,
+    removeMyMagic
 }
 
 const mapStateToProps = state => {

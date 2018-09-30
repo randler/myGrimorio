@@ -13,7 +13,6 @@ import {
     StyleSheet
 } from 'react-native';
 import { connect } from 'react-redux';
-import firebase from 'firebase';
 
 import FormRow from '../../components/forms/FormRow';
 import CardAbility from '../../components/cards/CardAbility';
@@ -26,6 +25,7 @@ import classesAdd from '../../../resources/data/js/classesAdd';
 import requisitoMultiClasse from '../../../resources/data/js/requisitoMultiClasse';
 
 import { createPerson, NIVEIS, getNameAtributo, getBonusProficiencia } from '../../../resources/data/js/utils';
+import { salvarPersonagem } from '../../actions';
 
 import LinePickerAddPerson from '../../components/lines/LinePickerAddPerson';
 
@@ -38,12 +38,12 @@ class AddPerson extends Component {
 
         this.state = {
             name: '',
-            forca: '',
-            destreza: '',
-            constituicao: '',
-            inteligencia: '',
-            sabedoria: '',
-            carisma: '',
+            forca: '1',
+            destreza: '1',
+            constituicao: '1',
+            inteligencia: '1',
+            sabedoria: '1',
+            carisma: '1',
             race: '',
             tendency: '',
             classe: 'Classes',
@@ -333,15 +333,15 @@ class AddPerson extends Component {
         );
     }
 
-    addNewPerson() {
-        const idUser = this.props.user.uid;
-
+    async addNewPerson() {
         var person = createPerson(this.state);
 
         console.log(person);
 
-        var userData = firebase.database().ref('persons');
-        userData.child(idUser).push(person);
+        const response = await this.props.salvarPersonagem(person);
+        if(response) {
+           return this.props.navigation.replace('dashboard');
+        }
     }
 
 }
@@ -433,10 +433,14 @@ const styles = StyleSheet.create({
     }
 });
 
+const mapDispatchToProps = {
+    salvarPersonagem
+}
+
 const mapStateToProps = state => {
     const { user } = state;
     return user;
 }
 
 //make this component available to the app
-export default connect(mapStateToProps)(AddPerson);
+export default connect(mapStateToProps, mapDispatchToProps)(AddPerson);

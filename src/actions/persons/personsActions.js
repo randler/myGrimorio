@@ -1,3 +1,6 @@
+import firebase from 'firebase';
+import { Alert } from 'react-native';
+
 export const SET_PERSONS = 'SET_PERSONS';
 export const setPersons = persons => {
     return {
@@ -20,3 +23,21 @@ export const getIdPerson = () => {
         type: GET_ID_PERSON
     }
 } 
+
+export const salvarPersonagem = personagem => {
+    const { currentUser } = firebase.auth();
+
+    return async dispatch => {
+        try {
+            await firebase.database()
+                    .ref('persons')
+                    .child(currentUser.uid)
+                    .push(personagem); 
+            Alert.alert('Sucesso', 'Personagem criado!');
+            return true;
+        } catch(e) {
+            Alert.alert('Erro', 'Erro ao tentar salvar o personagem!');
+            return false;
+        }
+    }
+}

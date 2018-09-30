@@ -77,18 +77,7 @@ class AllMagics extends React.Component {
             <View style={styles.container}>
                 { this.renderSearch() }
                 <ScrollView 
-                    contentContainerStyle={styles.contencContainer}
-                    refreshControl={<RefreshControl 
-                                        colors={[
-                                            '#5B4500', 
-                                            '#967101', 
-                                            '#bf9003', 
-                                            '#D6A200',
-                                            '#eab100', 
-                                            '#383838']} 
-                                        tintColor={'#D6A200'} 
-                                        refreshing={this.state.refreshing}  
-                                        onRefresh={() => this.searchMagicsFirebase()} />}>
+                    contentContainerStyle={styles.contencContainer}>
                     {this.props.all_magics.length > 0 ?
                     <FlatList 
                         data={this.props.all_magics}

@@ -77,6 +77,14 @@ export const createPerson = (state) => {
     person.antecedentTraces.defects = state.defeito;
     
     person.class = state.classeArray;
+    
+    person.attributes.strength = state.forca;
+    person.attributes.dexterity = state.destreza;
+    person.attributes.constitution = state.constituicao;
+    person.attributes.intelligency = state.inteligencia;
+    person.attributes.knowledge = state.sabedoria;
+    person.attributes.charisma = state.carisma;
+
 
     return person;
 }

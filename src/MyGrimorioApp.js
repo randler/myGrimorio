@@ -10,6 +10,7 @@ import { composeWithDevTools } from 'remote-redux-devtools';
 import firebase from 'firebase';
 
 import rootReducer from './reducers';
+import { MenuProvider } from 'react-native-popup-menu';
 
 const store = createStore(rootReducer, composeWithDevTools(
     applyMiddleware(reduxThunk)
@@ -33,7 +34,9 @@ class MyGrimorioApp extends React.Component {
    render() {
        return(
         <Provider store={store} >
-            <Router />
+            <MenuProvider>
+                <Router />
+            </MenuProvider>
         </Provider>
       );
    }

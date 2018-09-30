@@ -124,7 +124,7 @@ class Dashboard extends Component {
                                 height: Dimensions.get('window').height - 100,
                                 justifyContent: 'center',
                                 alignItems: 'center', }}>
-                        <ActivityIndicator size="large" color = "#d6a200" />
+                        <ActivityIndicator size="large" color = "#D6A200" />
                     </View>);
         } else if(this.props.persons) {
             return Object.entries(this.props.persons).map((personagem, key) => (
