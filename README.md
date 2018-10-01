@@ -1,22 +1,10 @@
 ## Aplicação (Ainda em construção)
-![Login](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-17.png) 
-
-![Register](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-25.png) 
 
 ![Meus Personagens](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-13-46.png) 
 
 ![Novo Personagem parte 1](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-02.png) 
 
 ![Novo personagem parte 2](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-09.png) 
-
-![Descrição do personagem](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-19.png) 
-
-![Minhas magias](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-27.png) 
-
-![Todas as magias](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-35.png) 
-
-![Descrição de uma magia](https://github.com/randler/myGrimorio/blob/master/imgs-app/2018-09-26-11-14-45.png) 
-
 
 
 This project was bootstrapped with [Create React Native App](https://github.com/react-community/create-react-native-app).
