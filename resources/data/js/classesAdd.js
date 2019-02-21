@@ -1,0 +1,15 @@
+export default classesAdd = [
+    'Classes',
+    'Bárbaro',
+    'Bardo',
+    'Bruxo',
+    'Clérigo',
+    'Druida',
+    'Feiticeiro',
+    'Guerreiro',
+    'Ladino',
+    'Mago',
+    'Monge',
+    'Paladino',
+    'Patrulheiro',
+];

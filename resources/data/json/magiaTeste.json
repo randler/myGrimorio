@@ -1,0 +1,375 @@
+{
+"magics":[
+	{
+		"level": "2",
+		"name": "Acalmar Emoções",
+		"school": {
+			"pt": "Encantamento",
+			"style": "enchantment"
+		},
+		"castingTime": "1 ação",
+		"range": "18 metros",
+		"components": "V, S",
+		"concentration": "s",
+		"duration": "até 1 minuto",
+		"description": "Você tenta suprimir emoções fortes em um grupo de pessoas. Cada humanoide em uma esfera de 6 metros de raio, centrada em um ponto que você escolher dentro do alcance, deve realizar um teste de resistência de Carisma;uma criatura pode escolher falhar nesse teste, se desejar. Se uma criatura falhar na resistência, escolha um dentre os dois efeitos a seguir.</p><p> Você pode suprimir qualquer efeito que esteja deixando a criatura enfeitiçada ou amedrontada. Quando essa magia terminar, qualquer efeito suprimido volta a funcionar, considerando que sua duração não tenha acabado nesse meio tempo.</p><p> Alternativamente, você pode tornar um alvo indiferente às criaturas que você escolher que forem hostis a ele. Essa indiferença acaba se o alvo for atacado ou ferido por uma magia ou se ele testemunhar qualquer dos seus amigos sendo ferido. Quando a magia terminar, a criatura se tornará hostil novamente, a não ser que o Mestre diga o contrário.",
+		"classes": [
+			"Bardo",
+			"Clérigo"
+		]
+	},
+	{
+		"level": "4",
+		"name": "Adivinhação",
+		"ritual": "s",
+		"school": {
+			"pt": "Adivinhação",
+			"style": "divination"
+		},
+		"castingTime": "1 ação",
+		"range": "pessoal",
+		"components": "V, S, M",
+		"duration": "instantânea",
+		"material": "incenso e uma oferenda apropriada para sacrifício à sua religião, juntos valendo, no mínimo, 25 po, consumidos pela magia",
+		"description": "Sua magia e uma oferenda colocam você em contato com um deus ou servo divino. Você faz uma única pergunta a respeito de um objetivo, evento ou atividade específico que irá ocorrer dentro de 7 dias. O Mestre oferece uma resposta confiável. A resposta deve ser uma frase curta, uma rima enigmática ou um presságio.</p><p> A magia não leva em consideração qualquer possível circunstância que possa mudar o que está por vir, como a conjuração de magias adicionais ou a perda ou ganho de um companheiro.</p><p> Se você conjurar a magia duas ou mais vezes antes de completar seu próximo descanso longo, existe uma chance cumulativa de 25 por cento de cada conjuração, depois da primeira que você fez, ter um resultado aleatório. O Mestre faz essa jogada secretamente.",
+		"classes": [
+			"Clérigo"
+		]
+	},
+	{
+		"level": "2",
+		"name": "Ajuda",
+		"school": {
+			"pt": "Abjuração",
+			"style": "abjuration"
+		},
+		"castingTime": "1 ação",
+		"range": "9 metros",
+		"components": "V, S, M",
+		"duration": "8 horas",
+		"material": "uma pequena fita de tecido branco",
+		"description": "Sua magia inspira seus aliados com vigor e determinação. Escolha até três criaturas dentro do alcance. O máximo de pontos de vida e os pontos de vida atuais de cada alvo aumentam em 5, pela duração.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 3° nível ou superior, os pontos de vida dos alvos aumentam em 5 pontos adicionais para cada nível do espaço acima do o 2°.",
+		"classes": [
+			"Clérigo",
+			"Paladino"
+		]
+	},
+	{
+		"level": "1",
+		"name": "Alarme",
+		"ritual": "s",
+		"school": {
+			"pt": "Abjuração",
+			"style": "abjuration"
+		},
+		"castingTime": "1 minuto",
+		"range": "9 metros",
+		"components": "V, S, M",
+		"duration": "8 horas",
+		"material": "um pequeno sino e um pequeno fio de prata",
+		"description": "Você coloca um alarme para intrusos desavisados. Escolha uma porta, uma janela ou uma área dentro do alcance que não seja maior que 6 metros cúbicos. Até a magia acabar, um alarme alerta você sempre que uma criatura Miúda ou maior tocarem ou entrarem na área protegida. Quando você conjura a magia, você pode designar as criaturas que não ativarão o alarme. Você também escolhe se o alarme será mental ou audível.</p><p> Um alarme mental alerta você com um silvo na sua mente, se você estiver a até de 1,5 quilômetro da área protegida. Esse silvo acordará você se você estiver dormindo.</p><p> Um alarme audível produz o som de um sino de mão por 10 minutos num raio de 18 metros.",
+		"classes": [
+			"Mago",
+			"Patrulheiro"
+		]
+	},
+	{
+		"level": "6",
+		"name": "Aliado Planar",
+		"school": {
+			"pt": "Conjuração",
+			"style": "conjuration"
+		},
+		"castingTime": "10 minutos",
+		"range": "18 metros",
+		"components": "V, S",
+		"duration": "instantânea",
+		"description": "Você suplica a uma entidade transcendental por ajuda. O ser deve ser conhecido por você: seu deus, um primordial, um príncipe demônio ou algum outro ser de poder cósmico. Essa entidade envia um celestial, um corruptor ou um elemental leal a ela para ajudar você, fazendo a criatura aparecer em um espaço desocupado dentro do alcance. Se você conhecer o nome de uma criatura especifica, você pode falar o nome quando conjurar essa magia para requisitar essa criatura, do contrário, você pode receber uma criatura diferente de qualquer forma (à escolha do Mestre).</p><p> Quando a criatura aparecer, ela não está sob nenhuma compulsão para se comportar de um modo em particular. Você pode pedir a criatura que realize um serviço em troca de um pagamento, mas ela não é obrigada a fazê - lo. A tarefa solicitada pode variar de simples (carregue - nos voando para o outro lado do abismo ou nos ajude a lutar essa batalha) a complexa (espione nossos inimigos ou nos proteja durante nossa incursão na masmorra). Você deve ser capaz de se comunicar com a criatura para barganhar os serviços dela.</p><p> O pagamento pode ser feito de várias formas. Um celestial pode requerer uma generosa doação de ouro ou itens mágicos para um templo aliado, enquanto que um corruptor pode exigir um sacrifício vivo ou uma parte dos espólios. Algumas criaturas podem trocar seus serviços por uma missão feita por você.</p><p> Como regra geral, uma tarefa que possa ser medida em minutos, exigirá um pagamento de 100 po por minuto. Uma tarefa medida em horas exigirá 1. 000 po por hora. E uma tarefa medida em dias (até 10 dias) exigirá 10. 000 po por dia. O Mestre pode ajustar esses pagamentos baseado nas circunstâncias pelas quais a magia foi conjurada. Se a tarefa estiver de acordo com o caráter da criatura, o pagamento pode ser reduzido à metade, ou mesmo dispensado. Tarefas que não proporcionem perigo, tipicamente requerem apenas metade do pagamento sugerido, enquanto que tarefas especialmente perigosas podem exigir um grande presente. As criaturas raramente aceitarão tarefas que pareçam suicidas.</p><p> Após a criatura completar a tarefa ou quando a duração acordada para o serviço expirar, a criatura retornará para seu plano natal depois de relatar sua partida a você, se apropriado para a tarefa e se possível. Se você não for capaz de acertar um preço para os serviços da criatura, ela imediatamente voltará para o seu plano natal.</p><p> Uma criatura convidada para se juntar ao seu grupo, conta como um membro dele, recebendo sua parte total na premiação de pontos de experiência.",
+		"classes": [
+			"Clérigo"
+		]
+	},
+	{
+		"level": "5",
+		"name": "Aljava Veloz",
+		"school": {
+			"pt": "Transmutação",
+			"style": "transmutation"
+		},
+		"castingTime": "1 ação bônus",
+		"range": "toque",
+		"components": "V, S, M",
+		"concentration": "s",
+		"duration": "até 1 minuto",
+		"material": "uma aljava contendo, pelo menos, uma munição",
+		"description": "Você transmuta sua aljava para que ela produza um suprimento interminável de munições não - mágicas, que parecem saltar na sua mão quando você tenta pegá-las.</p><p> Em cada um dos seus turnos, até a magia acabar, você pode usar uma ação bônus para realizar dois ataques com uma arma que use munição de uma aljava. Cada vez que você fizer tais ataques à distância, sua aljava, magicamente, repõe a munição que você usou com uma munição não - mágica similar. Qualquer munição criada por essa magia se desintegra quando a magia acaba. Se a aljava não estiver mais com você, a magia acaba.",
+		"classes": [
+			"Patrulheiro"
+		]
+	},
+	{
+		"level": "9",
+		"name": "Alterar Forma",
+		"school": {
+			"pt": "Transmutação",
+			"style": "transmutation"
+		},
+		"castingTime": "1 ação",
+		"range": "pessoal",
+		"components": "V, S, M",
+		"concentration": "s",
+		"duration": "até 1 hora",
+		"material": "uma argola de jade valendo, no mínimo, 1. 500 po, que você deve colocar na sua cabeça antes de conjurar a magia",
+		"description": "Você assume a forma de uma criatura diferente, pela duração. A nova forma pode ser qualquer criatura com um nível de desafio igual ao seu nível ou menor. A criatura não pode ser nem um constructo nem um morto - vivo e você deve ter visto esse tipo de criatura pelo menos uma vez. Você se transforma num exemplar médio da criatura, um sem quaisquer níveis de classe nem característica Conjuração.</p><p> Suas estatísticas de jogo são substituídas pelas estatísticas da forma escolhida, no entanto, você mantém sua tendência e valores de Inteligência, Sabedoria e Carisma. Você também mantém suas proficiências em testes de resistência, além de ganhar as da nova criatura. Se a criatura tiver a mesma proficiência que você e o bônus listado nas estatísticas dela for maior que o seu, use os bônus da criatura no lugar do seu. Você não pode usar qualquer ação lendária ou de covil da nova forma.</p><p> Você assume os pontos de vida e Dados de Vida da sua nova forma. Quando você reverter a sua forma normal, você retorna à quantidade de pontos de vida que tinha antes da transformação. Se você reverter como resultado de ter caído a 0 pontos de vida, qualquer dano excedente é recebido pela sua forma normal. Contato que o dano excedente não reduza os pontos de vida da sua forma normal a 0, você não cairá inconsciente.</p><p> Você mantém os benefícios de qualquer característica da sua classe, raça ou outra fonte e pode usá-las, considerando que sua nova forma é fisicamente capaz de fazê - lo. Você não pode usar quaisquer sentidos especiais que você possua (por exemplo, visão no escuro) a não ser que a nova forma também possua o sentido. Você só poderá falar se a nova forma, normalmente, puder falar.</p><p> Quando você se transforma, você pode escolher se o seu equipamento cai no chão, é assimilado a sua nova forma ou é usado por ela. Equipamentos vestidos e carregados funcionam normalmente. O Mestre decide qual equipamento é viável para a nova forma vestir ou usar, baseado na forma e tamanho da criatura. O seu equipamento não muda de forma ou tamanho para se adaptar à nova forma e, qualquer equipamento que a nova forma não possa vestir deve, ou cair no chão ou ser assimilado por ela. Equipamentos assimilados não terão efeito nesse estado.</p><p> Pela duração da magia, você pode usar sua ação para assumir uma forma diferente, seguindo as mesmas restrições e regras da forma anterior, com uma exceção: se sua nova forma tiver mais pontos de vida que sua forma atual, seus pontos de vida mantém o valor atual.",
+		"classes": [
+			"Druida",
+			"Mago"
+		]
+	},
+	{
+		"level": "2",
+		"name": "Alterar-se",
+		"school": {
+			"pt": "Transmutação",
+			"style": "transmutation"
+		},
+		"castingTime": "1 ação",
+		"range": "pessoal",
+		"components": "V, S",
+		"concentration": "s",
+		"duration": "até 1 hora",
+		"description": "Você assume uma forma diferente. Quando conjurar essa magia, escolha uma das seguintes opções, o efeito durará pela duração da magia. Enquanto a magia durar, você pode terminar uma opção com uma ação para ganhar os benefícios de uma diferente.</p><p><em><strong> Adaptação Aquática </strong></ em>. Você adapta seu corpo para um ambiente aquático, brotando guelras e crescendo membranas entre seus dedos. Você pode respirar embaixo d’ água e ganha deslocamento de natação igual a seu deslocamento terrestre.</p><p><em><strong> Mudar Aparência </strong></ em>. Você transforam sua aparência. Você decide com o que você parece, incluindo altura, peso, traços faciais, timbre da sua voz, comprimento do cabelo, coloração e características distintas, se tiverem. Você pode ficar parecido com um membro de outra raça, apesar de nenhuma de suas estatísticas mudar. Você também não pode parecer com uma criatura de um tamanho diferente do seu, e seu formado básico permanece o mesmo;se você for bípede, você não pode usar essa magia para se tornar quadrupede, por exemplo. A qualquer momento, pela duração da magia, você pode usar sua ação para mudar sua aparência dessa forma, novamente.</p><p><em><strong> Armas Naturais </strong></ em>. Você faz crescerem garras, presas, espinhos, chifres ou armas naturais diferentes, à sua escolha. Seus ataques desarmados causam 1 d6 de dano de concussão, perfurante ou cortante, como apropriado para a arma natural que você escolheu, e você é proficiente com seus ataques desarmados. Finalmente, a arma natural é mágica e você tem + 1 de bônus nas jogadas de ataque e dano que você fizer com ela.",
+		"classes": [
+			"Feiticeiro",
+			"Mago"
+		]
+	},
+	{
+		"level": "0",
+		"name": "Amizade",
+		"school": {
+			"pt": "Encantamento",
+			"style": "enchantment"
+		},
+		"castingTime": "1 ação",
+		"range": "pessoal",
+		"components": "S, M",
+		"concentration": "s",
+		"duration": "até 1 minuto",
+		"material": "uma pequena quantidade de maquiagem aplicada ao rosto durante a conjuração da magia.",
+		"description": "Pela duração, você terá vantagem em todos os testes de Carisma direcionados a uma criatura, à sua escolha, que não seja hostil a você. Quando a magia acabar, a criatura perceberá que você usou maia para influenciar o humor dela, e ficará hostil a você. Uma criatura propensa a violência irá atacar você. Outra criatura pode buscar outras formas de retaliação (a critério do Mestre), dependendo da natureza da sua interação com ela.",
+		"classes": [
+			"Bardo",
+			"Bruxo",
+			"Feiticeiro",
+			"Mago"
+		]
+	},
+	{
+		"level": "1",
+		"name": "Amizade Animal",
+		"school": {
+			"pt": "Encantamento",
+			"style": "enchantment"
+		},
+		"castingTime": "1 ação",
+		"range": "9 metros",
+		"components": "V, S, M",
+		"duration": "24 horas",
+		"material": "um punhado de comida",
+		"description": "Essa magia deixa você convencer uma besta que você não quer prejudicar. Escolha uma besta que você possa ver dentro do alcance. Ela deve ver e ouvir você. Se a Inteligência da besta for 4 ou maior, a magia falha. Do contrário, a besta deve ser bem sucedida num teste de resistência de Sabedoria ou ficará enfeitiçada por você pela duração da magia. Se você ou um dos seus companheiros ferir o alvo, a magia termina.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 2° nível ou superior, você pode afetar uma besta adicional para cada nível do espaço acima do 1°.",
+		"classes": [
+			"Bardo",
+			"Druida",
+			"Patrulheiro"
+		]
+	},
+	{
+		"level": "3",
+		"name": "Ampliar Plantas",
+		"school": {
+			"pt": "Transmutação",
+			"style": "transmutation"
+		},
+		"castingTime": "1 ação ou 8 horas",
+		"range": "45 metros",
+		"components": "V, S",
+		"duration": "instantânea",
+		"description": "Essa magia canaliza vitalidade nas plantas dentro de uma área especifica. Existem dois usos possíveis para essa magia, concedendo ou benefícios imediatos ou a longo prazo.</p><p> Se você conjurar essa magia usando 1 ação, escolha um ponto dentro do alcance. Todas as plantas normais num raio de 30 metros centrado no ponto, tornam - se espessas e carregadas. Uma criatura se movendo na área deve gastar 6 metros de movimento para cada 1,5 metro que se mover.</p><p> Você pode excluir uma ou mais áreas de qualquer tamanho, dentro da área da magia, para não ser afetada. Se você conjurar essa magia ao longo de 8 horas, você fertiliza a terra. Todas as plantas num raio de 800 metros, centrado no ponto dentro do alcance, ficam enriquecidas por 1 ano. As plantas fornecerão o dobro da quantidade normal de comida quando colhidas.",
+		"classes": [
+			"Bardo",
+			"Druida",
+			"Patrulheiro"
+		]
+	},
+	{
+		"level": "5",
+		"name": "Âncora Planar",
+		"school": {
+			"pt": "Abjuração",
+			"style": "abjuration"
+		},
+		"castingTime": "1 hora",
+		"range": "18 metros",
+		"components": "V, S, M",
+		"duration": "24 horas",
+		"material": "uma joia valendo, no mínimo, 1. 000 po, consumida pela magia",
+		"description": "Com essa magia, você tenta obrigar um celestial, corruptor, elemental ou fada a servi - lo. A criatura deve estar dentro do alcance durante toda a conjuração da magia. (Tipicamente, a criatura, primeiramente, é invocada dentro de um círculo mágico invertido para mantê - la presa enquanto a magia é conjurada.) Ao completar a conjuração, o alvo deve realizar um teste de resistência de Carisma. Se falhar na resistência, ela é obrigada a servir você pela duração. Se a criatura foi invocada ou criada por outra magia, a duração da magia é estendida para se equiparar a dessa magia.</p><p> Uma criatura obrigada deve seguir suas instruções da melhor forma que puder. Você poderia comandar a criatura a acompanhar você em uma aventura, a guardar um local ou a enviar uma mensagem. A criatura obedece ao pé da letra suas instruções, mas se a criatura for hostil a você, ela se esforçará para distorcer suas palavras para atingir seus próprios objetivos. Se a criatura atender suas instruções completamente antes da magia acabar, ela viajará até você para relatar esse fato se você estiver no mesmo plano de existência. Se você estiver em um plano de existência diferente, ela retornará para o lugar onde você a contatou e permanecerá lá até a magia acabar.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de nível superior, a duração aumenta para 10 dias com um espaço de 6° nível, para 30 dias com um espaço de 7° nível, para 180 dias com um espaço de 8° nível e para um ano com um espaço de magia de 9° nível.",
+		"classes": [
+			"Bardo",
+			"Clérigo",
+			"Druida",
+			"Mago"
+		]
+	},
+	{
+		"level": "3",
+		"name": "Andar Na Água",
+		"ritual": "s",
+		"school": {
+			"pt": "Transmutação",
+			"style": "transmutation"
+		},
+		"castingTime": "1 ação",
+		"range": "9 metros",
+		"components": "V, S, M",
+		"duration": "1 hora",
+		"material": "uma rolha",
+		"description": "Essa magia concede a habilidade de se mover através de qualquer superfície líquida– como água, ácido, lama, neve, arreia movediça ou lava– como se ela fosse chão sólido inofensivo (as criaturas atravessando lava derretida ainda podem sofrer dano do calor). Até dez criaturas voluntária que você possa ver, dentro do alcance, ganham essa habilidade pela duração.</p><p> Se você afetar uma criatura submersa em um líquido, a magia ergue o alvo para a superfície do líquido a uma taxa de 18 metros por rodada.",
+		"classes": [
+			"Clérigo",
+			"Druida",
+			"Feiticeiro",
+			"Patrulheiro"
+		]
+	},
+	{
+		"level": "3",
+		"name": "Animar Mortos",
+		"school": {
+			"pt": "Necromancia",
+			"style": "necromancy"
+		},
+		"castingTime": "1 minuto",
+		"range": "3 metros",
+		"components": "V, S, M",
+		"duration": "instantânea",
+		"material": "uma gota de sangue, um pedaço de carne e uma punhado de pó de osso",
+		"description": "Essa magia cria um servo morto - vivo. Escolha uma pilha de ossos ou um corpo de um humanoide Médio ou Pequeno dentro do alcance. Sua magia imbui o alvo com uma imitação corrompida de vida, erguendo - o como uma criatura morta - viva. O alvo se torna um esqueleto, se você escolheu ossos, ou um zumbi, se você escolheu um corpo (o Mestre tem as estatísticas de jogo da criatura).</p><p> Em cada um dos seus turnos, você pode usar uma ação bônus para comandar mentalmente qualquer criatura que você criou com essa magia, se a criatura estiver a até 18 metros de você (se você controla diversas criaturas, você pode comandar qualquer uma ou todas elas ao mesmo tempo, emitindo o mesmo comando para cada uma). Você decide qual ação a criatura irá fazer e para onde ela irá se mover durante o próximo turno dela, ou você pode emitir um comando geral, como para guardar uma câmara ou corredor especifico. Se você não der nenhum comando, as criaturas apenas se defenderão contra criaturas hostis. Uma vez que receba uma ordem, a criatura continuará a segui - la até a tarefa estar concluída.</p><p> A criatura fica sob seu controle por 24 horas, depois disso ela para de obedecer aos seus comandos. Para manter o controle da criatura por mais 24 horas, você deve conjurar essa magia na criatura novamente, antes das 24 horas atuais terminarem. Esse uso da magia recupera seu controle sobre até quatro criaturas que você tenha animado com essa magia, ao invés de animar uma nova.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 4° nível ou superior, você pode animar ou recuperar o controle de duas criaturas mortas - vivas para cada nível do espaço acima do 3°. Cada uma dessas criaturas deve vir de um corpo ou pilha de ossos diferente.",
+		"classes": [
+			"Clérigo",
+			"Mago"
+		]
+	},
+	{
+		"level": "5",
+		"name": "Animar Objetos",
+		"school": {
+			"pt": "Transmutação",
+			"style": "transmutation"
+		},
+		"castingTime": "1 ação",
+		"range": "36 metros",
+		"components": "V, S",
+		"concentration": "s",
+		"duration": "até 1 minuto",
+		"description": "Objetos ganham vida ao seu comando. Escolha até dez objetos não - mágicos dentro do alcance, que não estejam sendo vestidos ou carregados. Alvos Médios contam como dois objetos, alvos Grandes contam como quatro objetos e alvos Enormes contam como oito objetos. Você não pode animar um objeto maior que Enorme. Cada alvo se anima e torna - se uma criatura sob seu controle até o final da magia ou até ser reduzido a 0 pontos de vida.</p><p> Com uma ação bônus, você pode comandar mentalmente qualquer criatura que você criar com essa magia se a criatura estiver a até 150 metros de você (se você controla várias criaturas, você pode comandar qualquer ou todas elas ao mesmo tempo, emitindo o mesmo comando para cada uma). Você decide qual ação a criatura irá fazer e para onde ela irá se mover durante o próximo turno dela, ou você pode emitir um comando geral, como para guardar uma câmara ou corredor especifico. Se você não der nenhum comando, as criaturas apenas se defenderão contra criaturas hostis. Uma vez que receba uma ordem, a criatura continuará a segui - la até a tarefa estar concluída.",
+		"classes": [
+			"Bardo",
+			"Feiticeiro",
+			"Mago"
+		]
+	},
+	{
+		"level": "8",
+		"name": "Antipatia/Simpatia",
+		"school": {
+			"pt": "Encantamento",
+			"style": "enchantment"
+		},
+		"castingTime": "1 hora",
+		"range": "18 metros",
+		"components": "V, S, M",
+		"duration": "10 dias",
+		"material": "ou um pedaço de alume embebido em vinagre para o efeito de antipatia, ou uma gota de mel para o efeito de simpatia",
+		"description": "Essa magia atrai ou repele as criaturas de sua escolha. Você escolhe um alvo dentro do alcance, tanto um objeto ou criatura Enorme ou menor ou uma área que não seja maior que 60 metros cúbicos. Então, especifica um tipo de criatura inteligente, como dragões vermelhos, goblins ou vampiros. Você envolve o alvo com uma aura que pode atrair ou repelir as criaturas especificas pela duração. Escolha antipatia ou simpatia como efeito da aura.</p><p><em><strong> Antipatia </strong></ em>. O encantamento faz com que criaturas do tipo designado por você sintam - se fortemente impelidos em deixar a área e evitar o alvo. Quando uma dessas criaturas puder ver o alvo ou ficar a 18 metros dele, a criatura deve ser bem sucedida num teste de resistência de Sabedoria ou ficará amedrontada. A criatura continuará amedrontada enquanto puder ver o alvo ou permanecer a 18 metros dele. Enquanto estiver amedrontada pelo alvo, a criatura deve usar seu deslocamento para se mover para o local seguro mais próximo o qual ela não possa ver o alvo. Se a criatura se mover para mais de 18 metros do alvo e não puder vê - lo, a criatura não estará mais amedrontada, mas ela ficará amedrontada novamente se voltar a ver o alvo ou ficar a 18 metros dele.</p><p><em><strong> Simpatia </strong></ em>. O encantamento faz com que as criaturas especificadas sintam - se fortemente impelidos a se aproximar do alvo enquanto estiverem a 18 metros dele ou puderem vê - lo. Quando uma dessas criaturas puder ver o alvo ou ficar a 18 metros dele, a criatura deve ser bem sucedida num teste de resistência de Vontade ou usará seu deslocamento em cada um dos seus turnos para entrar na área ou se mover até o alcance do alvo. Quando a criatura tiver feito isso, ela não poderá se afastar do alvo voluntariamente.</p><p> Se o alvo causar dano ou ferir a criatura afetada de alguma forma, a criatura afetada pode realizar um novo teste de resistência de Sabedoria para terminar o efeito, como descrito abaixo.</p><p><em><strong> Terminando o Efeito </strong></ em>. Se uma criatura afetada terminar se turno enquanto não estiver a até 18 metros do alvo ou não for capaz de vê - lo, a criatura faz um teste de resistência de Sabedoria. Em um sucesso, a criatura não estará mais afetada pelo alvo e reconhecerá o sentimento de repugnância ou atração como mágico. Além disso, uma criatura afetada pela magia tem direito a outro teste de resistência de Sabedoria a cada 24 horas enquanto a magia durar.</p><p> Uma criatura que obtenha sucesso na resistência contra esse efeito ficará imune a ele por 1 minuto, depois desse tempo, ela pode ser afetada novamente.",
+		"classes": [
+			"Druida",
+			"Mago"
+		]
+	},
+	{
+		"level": "2",
+		"name": "Aprimorar Habilidade",
+		"school": {
+			"pt": "Transmutação",
+			"style": "transmutation"
+		},
+		"castingTime": "1 ação",
+		"range": "toque",
+		"components": "V, S, M",
+		"concentration": "s",
+		"duration": "até 1 hora",
+		"material": "pelo ou penas de uma besta",
+		"description": "Você toca uma criatura e a agracia com aprimoramento mágico. Escolha um dos efeitos a seguir;o alvo ganha esse efeito até o fim da magia.</p><p><em><strong> Agilidade do Gato </strong></ em>. O alvo tem vantagem em testes de Destreza. Ele também não sofre dano ao cair de 6 metros ou menos, se não estiver incapacitado.</p><p><em><strong> Esperteza da Raposa </strong></ em>. O alvo tem vantagem em testes de Inteligência.</p><p><em><strong> Esplendor da Águia </strong></ em>. O alvo tem vantagem em testes de Carisma.</p><p><em><strong> Força do Touro </strong></ em>. O alvo tem vantagem em testes de Força e sua capacidade de carga é dobrada.</p><p><em><strong> Sabedoria da Coruja </strong></ em>. O alvo tem vantagem em testes de Sabedoria.</p><p><em><strong> Vigor do Urso </strong></ em>. O alvo tem vantagem em testes de Constituição. Ele também recebe 2 d6 pontos de vida temporários, que são perdidos quando a magia termina.</p><p><strong> Em Níveis Superiores </strong>. Quando você conjurar essa magia usando um espaço de magia de 3° nível ou superior, você pode afetar uma criatura adicional para cada nível do espaço acima do 2°.",
+		"classes": [
+			"Bardo",
+			"Clérigo",
+			"Druida",
+			"Feiticeiro"
+		]
+	},
+	{
+		"level": "9",
+		"name": "Aprisionamento",
+		"school": {
+			"pt": "Abjuração",
+			"style": "abjuration"
+		},
+		"castingTime": "1 minuto",
+		"range": "9 metros",
+		"components": "V, S, M",
+		"duration": "até ser dissipada",
+		"material": "um pergaminho de representação ou uma estatueta esculpida para se parecer com o alvo e um componente especial, que varia de acordo com a versão da magia que você escolher, valendo, no mínimo, 500 po por Dado de Vida",
+		"description": "Você cria um impedimento mágico para imobilizar uma criatura que você possa ver, dentro do alcance. O alvo deve ser bem sucedido num teste de resistência de Sabedoria ou será vinculado à magia;se ele for bem sucedido, ele será imune a essa magia se você conjurá-la novamente. Enquanto estiver sob efeito dessa magia, a criatura não precisará respirar, comer ou beber e não envelhece. Magias de adivinhação não podem localizar ou perceber o alvo.</p><p> Quando você conjura essa magia, você escolhe uma das seguintes formas de aprisionamento.</p><p><em><strong> Enterrar </strong></ em>. O alvo é sepultado bem fundo na terra em uma esfera de energia mágica que é grande o suficiente para conter o alvo. Nada pode atravessar a esfera e nenhuma criatura pode se teletransportar ou usar viagem plantar para entrar ou sair dela.</p><p> O componente especial para essa versão da magia é um pequeno globo de mitral.</p><p><em><strong> Acorrentar </strong></ em>. Pesadas correntes, firmemente presas ao solo, matem o alvo no lugar. O alvo está impedido até a magia acabar e ele não pode se mover ou ser movido por nenhum meio, até lá.</p><p> O componente especial para essa versão da magia é uma fina corrente de metal precioso.</p><p><em><strong> Prisão Cercada </strong></ em>. A magia transporta o alvo para dentro de um pequeno semiplano que é protegido contra teletransporte e viagem planar. O semiplano pode ser um labirinto, uma jaula, uma torre ou qualquer estrutura ou área confinada similar, à sua escolha.</p><p> O componente material especial para essa versão da magia é uma representação em miniatura da prisão, feita de jade.</p><p><em><strong> Contenção Reduzida </strong></ em>. O alvo é reduzido até o tamanho de 30 centímetros e é aprisionado dentro de uma gema ou objeto similar. A luz pode passar através da gema normalmente (permitindo que o alvo veja o exterior e outras criaturas vejam o interior), mas nada mais pode atravessá-la, mesmo por meios de teletransporte ou viagem planar. A gema não pode ser partida ou quebrada enquanto a magia estiver efetiva.</p><p> O componente especial para essa versão da magia é uma gema transparente grande, como um coríndon, diamante ou rubi.</p><p><em><strong> Torpor </strong></ em>. O alvo cai no sono e não pode ser acordado.</p><p> O componente especial para essa versão da magia consiste em ervas soporíferas raras.</p><p><em><strong> Terminando a Magia </strong></ em>. Durante a conjuração da magia, em quaisquer das versões, você pode especificar uma condição que irá fazer a magia terminar e libertará o alvo. A condição pode ser o quão especifica ou elaborada quanto você quiser, mas o Mestre deve concordar que a condição é razoável e tem uma probabilidade de acontecer. As condições podem ser baseadas no nome, identidade ou divindade da criatura mas, no mais, devem ser baseadas em ações ou qualidades observáveis e não em valores intangíveis tais como nível, classe e pontos de vida.</p><p> A magia dissipar magia pode terminar a magia apenas se for conjurada como uma magia de 9° nível, tendo como alvo ou a prisão ou o componente especial usado para criá-la.</p><p> Você pode usar um componente especial em particular para criar apenas uma prisão por vez. Se você conjurar essa magia novamente usando o mesmo componente, o alvo da primeira conjuração é, imediatamente, liberado do vínculo.",
+		"classes": [
+			"Bruxo",
+			"Mago"
+		]
+	},
+	{
+		"level": "4",
+		"name": "Arca Secreta de Leomund",
+		"school": {
+			"pt": "Conjuração",
+			"style": "conjuration"
+		},
+		"castingTime": "1 ação",
+		"range": "toque",
+		"components": "V, S, M",
+		"duration": "instantânea",
+		"material": "um baú requintado, de 90 cm por 60 cm por 60 cm, construído com materiais raros valendo, no mínimo, 5. 000 po e uma réplica Miúda feita do mesmo material valendo, no mínimo, 50 po",
+		"description": "Você esconde um baú, e todo o seu conteúdo, no Plano Etéreo. Você deve tocar o baú e a réplica em miniatura que serve como componente material para a magia. O baú pode acomodar até 3, 6 metros cúbicos de matéria inorgânica (90 cm por 60 cm por 60 cm).</p><p> Enquanto o baú permanecer no Plano Etéreo, você pode usar uma ação e tocar a réplica para revocar o baú. Ele aparece em um espaço desocupado no chão a 1,5 metro de você. Você pode enviar o baú de volta ao Plano Etéreo usando uma ação e tocando tanto no baú quanto na réplica.</p><p> Após 60 dias, existe 5 por cento de chance, cumulativa, por dia do efeito da magia terminar. Esse efeito termina se você conjurar essa magia novamente, se a pequena réplica do baú for destruída ou se você decidir terminar a magia usando uma ação. Se a magia terminar enquanto o baú maior estiver no Plano Etéreo, ele estará irremediavelmente perdido.",
+		"classes": [
+			"Mago"
+		]
+	},
+	{
+		"level": "1",
+		"name": "Área Escorregadia",
+		"school": {
+			"pt": "Conjuração",
+			"style": "conjuration"
+		},
+		"castingTime": "1 ação",
+		"range": "18 metros",
+		"components": "V, S, M",
+		"duration": "1 minuto",
+		"material": "um pouco de pele de porco ou manteiga",
+		"description": "Graxa escorregadia cobre o solo em um quadrado de 3 metros centrado em um ponto, dentro do alcance, tornando essa área em terreno difícil pela duração.</p><p> Quando a graxa aparece, cada criatura de pé na área deve ser bem sucedida num teste de resistência de Destreza ou cairá no chão. Uma criatura que entre na área ou termine seu turno nela, deve ser bem sucedido num teste de resistência de Destreza ou cairá no chão.",
+		"classes": [
+			"Mago"
+		]
+	},
+]
+}

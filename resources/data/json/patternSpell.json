@@ -1,0 +1,2027 @@
+[
+	{
+		"level": "2",
+		"name": "Abraço Terrestre De Maximilian",
+		"nameUs": "Maximilian's Earthen Grasp",
+		"ritual": "n",
+		"school": {
+			"pt": "Transmutação",
+			"style": "transmutation"
+		},
+		"castingTime": "1 ação",
+		"range": "91 metros",
+		"components": "V S M (uma mão em miniatura esculpida em barro)",
+		"concentration": "n",
+		"duration": "concentração, até 1 minutos",
+		"description": "<p>Você escolhe espaço desocupado de 1,5 metro quadrado [5-foot-square] no solo que você possa ver, dentro do alcance. Uma mão Média feita de solo compacto se ergue ali e alcança uma criatura que você posa ver a até 1,5 metro [5 feet] dela. O alvo deve realizar um teste de resistência de Força. Se falhar na resistência, o alvo sofre 2d6 de dano de concussão e fica impedido pela duração da magia.</p><p>Com uma ação, você pode fazer com que a mão esmague o alvo impedido, que deve realizar um teste de resistência de Força. Ele sofre 2d6 de dano de concussão se falhar na resistência, ou metade desse dano se obtiver sucesso.</p><p>Para se libertar, o alvo impedido pode realizar um teste de Força contra a CD de resistência da sua magia. Se obtiver sucesso, o alvo escapa e não estará mais impedido pela mão.</p><p>Com uma ação bônus, você pode fazer a mão alcançar uma criatura diferente ou se mover para um espaço desocupado diferente, dentro do alcance. A mão solta um alvo impedido se você fizer isso.</p>",
+		"classes": [
+			"feiticeiro",
+			"mago"
+		],
+		"font": "Elemental Perverso pg 20, Guia de Xanathar para tudo pg 161"
+	},
+	{
+		"level": "1",
+		"name": "Absorver Elementos",
+		"nameUs": "Absorb Elements",
+		"ritual": "n",
+		"school": {
+			"pt": "abjuração",
+			"style": "abjuration"
+		},
+		"castingTime": "1 reação, que você faz quando sofre dano de ácido, frio, fogo, elétrico ou trovejante",
+		"range": "pessoal",
+		"components": "S",
+		"concentration": "n",
+		"duration": "1 rodada",
+		"description": "<p>A magia reverte parte da energia recebida, minimizando seu efeito em você e armazenando-a no seu próximo ataque corpo-a-corpo. Você tem resistência ao tipo de dano pertinente, incluindo do ataque que desencadeou a magia, até o início do seu próximo turno. Além disso, da primeira vez que você atingir um ataque corpo-a-corpo no seu próximo turno, o alvo sofre 1d6 de dano extra do tipo relacionado e a magia termina. </p><p><i><b>Em Níveis Superiores</b></i>. Quando você conjura essa magia usando um espaço de magia de 2° nível ou superior, o dano extra aumenta em 1d6 para cada nível do espaço acima do 1°.</p>",
+		"classes": [
+			"druida",
+			"feiticeiro",
+			"mago",
+			"patrulheiro"
+		],
+		"font": "Elemental Perverso pg 15, Guia de Xanathar para tudo pg 150"
+	},
+	{
+		"level": "2",
+		"name": "Agarrão Da Terra",
+		"nameUs": "Earthbind",
+		"ritual": "n",
+		"school": {
+			"pt": "Transmutação",
+			"style": "Transmutation"
+		},
+		"castingTime": "1 ação",
+		"range": "91 metros",
+		"components": "V",
+		"concentration": "n",
+		"duration": "concentração, até 1 minutos",
+		"description": "<p>Escolha uma criatura que você possa ver, dentro do alcance. Laços amarelados de energia mágica rodeiam a criatura. O alvo deve ser bem sucedido num teste de resistência de Força ou seu deslocamento de voo (se possuir) será reduzido para 0 metros [0 feet] pela duração da magia. Uma criatura voadora afetada por essa magia desce 18 metros [60 feet] por turno até aterrissar no solo ou a magia acabar.</p>",
+		"classes": [
+			"bruxo",
+			"druida",
+			"feiticeiro",
+			"mago"
+		],
+		"font": "Elemental Perverso pg 17, Guia de Xanathar para tudo pg 154"
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+	{
+        "id": null,
+		"level": "",
+		"name": "",
+		"nameUs": "",
+		"ritual": "",
+		"school": {
+			"pt": "",
+			"style": ""
+		},
+		"castingTime": "",
+		"range": "",
+		"components": "",
+		"concentration": "",
+		"duration": "",
+		"description": "",
+		"classes": [
+			"",
+			""
+		],
+		"font": ""
+	},
+]
