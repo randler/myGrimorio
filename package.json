@@ -3,35 +3,40 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
-    "jest-expo": "~27.0.0",
-    "react-native-scripts": "1.14.0",
-    "react-test-renderer": "16.3.1"
+    "babel-preset-react-native": "^2.1.0",
+    "babel-preset-react-native-stage-0": "^1.0.1",
+    "jest": "^24.1.0",
+    "jest-react-native": "^18.0.0",
+    "metro-react-native-babel-preset": "^0.52.0",
+    "react-test-renderer": "16.3.1",
+    "schedule": "^0.4.0",
+    "scheduler": "^0.13.2"
   },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
     "test": "jest"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "react-native"
   },
   "dependencies": {
-    "expo": "^27.0.1",
-    "firebase": "^5.4.2",
-    "react": "16.3.1",
-    "react-native": "~0.55.2",
+    "babel-preset-react": "^6.24.1",
+    "firebase": "^5.8.3",
+    "react": "16.5.1",
+    "react-native": "^0.57.8",
     "react-native-elements": "^0.19.1",
-    "react-native-popup-menu": "^0.14.0",
+    "react-native-popup-menu": "^0.14.2",
     "react-native-render-html": "^3.10.0",
     "react-native-uuid": "^1.4.9",
-    "react-navigation": "^2.12.1",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.0",
+    "react-native-vector-icons": "^6.3.0",
+    "react-navigation": "^2.18.3",
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.1",
+    "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",
-    "remote-redux-devtools": "^0.5.13"
+    "remote-redux-devtools": "^0.5.16"
   },
   "rnpm": {
     "assets": [

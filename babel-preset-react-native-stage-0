@@ -1,0 +1,4 @@
++ babel-preset-react@6.24.1
+added 3 packages from 2 contributors and audited 11336 packages in 15.504s
+found 672 vulnerabilities (4 low, 667 moderate, 1 high)
+  run `npm audit fix` to fix them, or `npm audit` for details

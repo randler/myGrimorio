@@ -1,0 +1,4 @@
+#Wed Feb 20 17:50:51 BRT 2019
+base.0=/home/randler/Developer/github/projetos_pessoais/myGrimorio/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

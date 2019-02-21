@@ -20,6 +20,10 @@ export const getUser = () => ({
     type: GET_USER
 });
 
+export const connectionState = ({ status }) => {
+    return { type: 'CHANGE_CONNECTION_STATUS', isConnected: status };
+};
+
 export const tryRegister = ({email, password}) => dispatch => {
     return firebase
         .auth()

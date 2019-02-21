@@ -6,6 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 
 import reduxThunk from 'redux-thunk';
 import { composeWithDevTools } from 'remote-redux-devtools';
+import { PersistGate } from 'redux-persist/integration/react'
 
 import firebase from 'firebase';
 
@@ -29,14 +30,17 @@ class MyGrimorioApp extends React.Component {
            messagingSenderId: "645050801754"
        };
        firebase.initializeApp(config);
+
    }
 
    render() {
        return(
         <Provider store={store} >
-            <MenuProvider>
-                <Router />
-            </MenuProvider>
+            <PersistGate loading={null} persistor={persistor}>
+                <MenuProvider>
+                    <Router />
+                </MenuProvider>
+            </PersistGate>
         </Provider>
       );
    }
