@@ -12,8 +12,8 @@ export default function magicReducer (state = INITIAL_STATE, action) {
         case CLEAR_FILTER: 
             return INITIAL_STATE;
         case SET_MAGICS:
-            INITIAL_STATE = action.magics;
-            return action.magics;
+            const magics = action.magics;
+            return magics;
         default:
             return state;
     }

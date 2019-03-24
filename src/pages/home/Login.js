@@ -10,9 +10,10 @@ import {
     LoadingButton,
     ButtonLogin,
     ContainerError,
-    ContainerErrorText,
     ButtonLoginText,
-    ImageHeader
+    ImageHeader,
+    ErrorText,
+    ContainerApp
 } from './styles';
 
 import { connect } from 'react-redux';
@@ -148,14 +149,14 @@ class Login extends React.Component {
 
         return (
             <ContainerError>
-                <ContainerErrorText>{ message }</ContainerErrorText>
+                <ErrorText>{ message }</ErrorText>
             </ContainerError>
         );
     }
 
     render() {
         return (
-            <ContainerLogin>
+            <ContainerApp>
             <ImageBackground source={ BOOK_BACKGROUND } />
                 <CardLogin>
                     <CardForm imagem = 'login' >
@@ -180,7 +181,7 @@ class Login extends React.Component {
                         <TextFooterLogin>Cadastre-se</TextFooterLogin>
                     </CardFormFooter>
                 </CardLogin>
-            </ContainerLogin>
+            </ContainerApp>
         );
     }
 };
