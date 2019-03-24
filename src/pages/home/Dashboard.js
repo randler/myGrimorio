@@ -16,13 +16,13 @@ import {
 import firebase from 'firebase';
 
 import { connect } from 'react-redux';
-import { tryLogout, setPersons, getUser } from '../actions';
+import { tryLogout, setPersons, getUser } from '../../actions';
 
-import CardPersonagem from '../components/cards/CardPersonagem';
-import AddPersonagem from '../components/AddPersonagem';
+import CardPersonagem from '../../components/cards/CardPersonagem';
+import AddPersonagem from '../../components/AddPersonagem';
 
-const LOGOUT    = require('../../resources/img/logout.png');
-const NOTHING   = require('../../resources/img/nothing.png');
+const LOGOUT    = require('../../../resources/img/logout.png');
+const NOTHING   = require('../../../resources/img/nothing.png');
 
 // create a component
 class Dashboard extends Component {

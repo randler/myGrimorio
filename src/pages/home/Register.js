@@ -2,9 +2,6 @@
 import React from 'react';
 import { 
     View,
-    AsyncStorage,
-    Alert,
-    KeyboardAvoidingView,
     StyleSheet,
     ActivityIndicator,
     TouchableOpacity,
@@ -13,35 +10,32 @@ import {
     TextInput
 } from 'react-native';
 
+import CardForm from '../../components/cards/CardForm';
+import FormRow from '../../components/forms/FormRow';
+
 import { connect } from 'react-redux';
+import { tryRegister } from '../../actions';
 
-import CardForm from '../components/cards/CardForm';
-import CardFormFooter from '../components/cards/CardFormFooter';
-import FormRow from '../components/forms/FormRow';
-
-import { tryLogin, userLoginSuccess  } from '../actions';
-
-const bookBackground = require('../../resources/img/book.jpg');
-const LOGO = require('../../resources/img/5ered.png');
+const bookBackground = require('../../../resources/img/book.jpg');
 
 // create a component
 class Login extends React.Component {
     static navigationOptions = {
-        headerRight:(
+        headerRight: (
             <Image  
                 style = {{
                     width: 30,
                     height: 30,
                     marginRight: 20,
                     aspectRatio: 1 }} 
-                source = {LOGO} 
-        />)
+                source = {require('../../../resources/img/5ered.png')} />
+        ),
     }
-
     constructor(props) {
         super(props);
 
         this.state = {
+            nome: '',
             mail: '',
             password: '',
             isLoading: false,
@@ -50,85 +44,51 @@ class Login extends React.Component {
 
     }
 
-    componentWillMount() {
-        this._retrieveData();
-    }
-
     onChangeHandler(field, value) {
         this.setState({
             [field]: value
         });
     }
-
-    _storeData = async (user) => {
-        try {
-            await AsyncStorage.setItem('@MyGrimorio:login', JSON.stringify(user));
-        } catch(error) {
-            console.log('error: not was possible persist the user data in phone')
-        }
-    }
-    _retrieveData = async () => {
-        try {
-            const value = JSON.parse( await AsyncStorage.getItem('@MyGrimorio:login')) || false;
-            const expiration = value.user.stsTokenManager.expirationTime;
-            
-            if (value) {
-                if(Date.now() > expiration) {
-                    this.logar(value.user.email, value.password)
-                } else {
-                    this.setState({
-                        mail: value.user.email,
-                        password: value.password
-                    });
-                    this.props.userLoginSuccess(value);
-                    return this.props.navigation.replace('dashboard');
-                }
-            }
-        } catch (error) {
-            return null;
-        }
-    }
-
-    logar(email = '', password = '') {
-        
+    tryRegister() {
         this.setState({isLoading: true, message: ''});
-        if (email === '' && password === '') { 
-            email = this.state.mail;
-            password = this.state.password;
-        }
+        const { mail: email, password } = this.state;
+
+        if(!email || !password) {
+            this.setState({
+                message: 'Digite os dados',
+                isLoading: false
+            });
+        } else {
             
-        
-        this.props.tryLogin({email, password})
+            this.props.tryRegister({email, password})
             .then((user) => {
-                if (user){
-                    user.password = password;
-                    this._storeData(user);                    
-                    return this.props.navigation.replace('dashboard');
-                }
+                if (user)
+                  return this.props.navigation.replace('home');  
 
                 this.setState({
                     isLoading: false,
                     message: ''
                 });
             })
-            .catch( error => {
+            .catch( error =>{
                 this.setState({
-                    isLoading: false,
+                    isLoading: false, 
                     message: this.getMessageByErrorCode(error)
                 });
             });
+        }
     }
 
     getMessageByErrorCode(errorCode) {
         switch(errorCode) {
+            case 'auth/email-already-in-use':
+                return 'E-mail já está em uso';
             case 'auth/invalid-email':
                 return 'E-mail inválido';
-            case 'auth/user-disabled':
-                return 'Usuário não permitido';
-            case 'auth/wrong-password':
-                return 'Senha e/ou Email incorreto(s)';
-            case 'auth/network-request-failed':
-                return Alert.alert('Falha na conexão', 'Não consigo acessar a internet. Verifique a sua conexão e tente novamente.');
+            case 'auth/operation-not-allowed':
+                return 'Operação não permitida';
+            case 'auth/weak-password':
+                return 'Senha fraca';
             default:
                 return errorCode;
         }
@@ -140,13 +100,12 @@ class Login extends React.Component {
         return (
             <TouchableOpacity
                 style = {styles.buttonLogin}
-                onPress = { () => this.logar()}
+                onPress = { () => this.tryRegister() }
                 underlayColor = '#a37c00'>
-                <Text style = {styles.buttonLoginText}>Entrar</Text>
+                <Text style = {styles.buttonLoginText}>Cadastrar</Text>
             </TouchableOpacity>
         )
     }
-
     renderMessage() {
         const { message } = this.state;
 
@@ -167,8 +126,8 @@ class Login extends React.Component {
                 style={styles.imageBook}
                 source={ bookBackground } />
                 <View style = {styles.cardLogin}>
-                    <CardForm imagem = 'login' >
-                        <FormRow first >
+                    <CardForm imagem = 'register' >
+                        <FormRow >
                             <TextInput
                                 style = {styles.textInput}
                                 placeholder = "user@mail.com"
@@ -187,9 +146,6 @@ class Login extends React.Component {
                         { this.renderMessage() }
                         { this.renderButton() }
                     </CardForm>
-                    <CardFormFooter toScreen = {() => this.props.navigation.navigate('register')} >
-                        <Text style = {styles.textFooter}>Cadastre-se</Text>
-                    </CardFormFooter>
                 </View>
             </View>
         );
@@ -250,9 +206,7 @@ const styles = StyleSheet.create({
 });
 
 const mapDispatchToProps = {
-    tryLogin,
-    userLoginSuccess,
-    
+    tryRegister
 }
 
 //make this component available to the app

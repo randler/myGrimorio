@@ -1,9 +1,9 @@
 import { React } from 'react';
 import { createStackNavigator} from 'react-navigation';
 
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Dashboard from './pages/Dashboard';
+import Login from './pages/home/Login';
+import Register from './pages/home/Register';
+import Dashboard from './pages/home/Dashboard';
 
 import { BottomTabNavigator } from './pages/Navigations/bottom/BottomTabNavigation';
 import AddPerson from './pages/person/AddPerson';

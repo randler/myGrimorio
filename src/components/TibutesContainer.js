@@ -26,6 +26,9 @@ const TibutesContainer = ({value, label, last}) => {
                 <Text style={ styles.modifyTxt}>{ getModificadorAtributo(value) }</Text>
             </View>
         </View>
+        <View>
+            <Text>Atletismo: </Text>
+        </View>
       </View>
     )
 };
@@ -34,6 +37,7 @@ const styles = StyleSheet.create({
     containerTribute: {
         borderWidth: 1,
         borderColor: '#000',
+        flexDirection: 'row',
     },
     containerImage: {
         width: Dimensions.get('window').width / 3,
