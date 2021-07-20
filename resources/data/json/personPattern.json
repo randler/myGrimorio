@@ -1,0 +1,63 @@
+{
+	"persons": [
+		{
+			"AlliesAndOrganizations": "",
+			"antecedent": "",
+			"antecedentTraces": {
+				"personality": "",
+				"connections": "",
+				"defects": "",
+				"ideals": ""   
+			},
+			"armorClass": "",
+			"attributes": {
+				"charisma": "",
+				"constitution": "",
+				"dexterity": "",
+				"intelligency": "",
+				"knowledge": "",
+				"strength": ""
+			},
+			"characteristics": [""],
+			"class": [{
+				"name": "",
+				"level": ""
+			}],
+			"displacement": "",
+			"equipments": {
+			"desc": [""],
+			"money": {
+				"pc": "",
+				"pp": "",
+				"pe": "",
+				"po": "",
+				"pl": ""
+			}  
+			},
+			"history": "",
+			"hurt": "",
+			"languages": [""],
+			"lifePointsTemporary": "",
+			"lifePointsTotal": "",
+			"myMagics": {
+				"magics":[""]
+			},
+			"name": "",
+			"othersProficiencies": [""],
+			"proficiencyBonus": "",
+			"race": "",
+			"skills": [""],
+			"tendency": "",
+			"treasures": [""],
+			"weapons": [{
+				"attacks": [""],
+				"magics": [""],
+				"bonus": "",
+				"damage": "",
+				"name": ""
+
+			}],
+			"xp": ""
+		}
+    ]
+}

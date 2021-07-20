@@ -1,0 +1,19 @@
+export default racas = [
+    'Raças',
+    'Aasimar',
+    'Anão',
+    'Draconato',
+    'Elfo',
+    'Firbolg',
+    'Golias',
+    'Gnomo',
+    'Halfling',
+    'Humano',
+    'Kenku',
+    'Meio-Elfo',
+    'Meio-Orc',
+    'Povo-Lagartos',
+    'Tabaxi',
+    'Tiefling',
+    'Tritões'
+];
