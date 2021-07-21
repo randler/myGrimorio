@@ -43,3 +43,5 @@ export class MyGrimorioApp extends Component {
       );
    }
 }
+
+export default MyGrimorioApp;
