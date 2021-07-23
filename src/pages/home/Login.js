@@ -76,7 +76,7 @@ class Login extends React.Component {
                         password: value.password
                     });
                     this.props.userLoginSuccess(value);
-                    return this.props.navigation.replace('dashboard');
+                    return this.props.navigation.navigate('Dashboard');
                 }
             }
         } catch (error) {
@@ -98,7 +98,7 @@ class Login extends React.Component {
                 if (user){
                     user.password = password;
                     this._storeData(user);                    
-                    return this.props.navigation.replace('dashboard');
+                    return this.props.navigation.navigate('Dashboard');
                 }
 
                 this.setState({

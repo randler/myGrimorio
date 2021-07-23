@@ -4,11 +4,11 @@ import {
     ScrollView,
     RefreshControl,
     ActivityIndicator,
-    AsyncStorage,
     Alert,
     TouchableOpacity,
 } from 'react-native';
 import firebase from 'firebase';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import { connect } from 'react-redux';
 import { tryLogout, setPersons, getUser } from '../../actions';
@@ -87,7 +87,7 @@ class Dashboard extends Component {
         this.props.tryLogout()
             .then(() => {
                 this._removeData('@MyGrimorio:login');
-                this.props.navigation.replace('login');
+                this.props.navigation.navigate('Login');
             })
             .catch( () => {
                 Alert.alert('Erro ao tentar sair da conta', 'Tente mais tarde!');
@@ -96,7 +96,7 @@ class Dashboard extends Component {
 
     navigateToPerson(id) {
         this._storeData(id, '@MyGrimorio:idPerson');
-        this.props.navigation.replace('home');
+        this.props.navigation.navigate('Home');
     }
 
     renderDashboard() {
@@ -140,7 +140,7 @@ class Dashboard extends Component {
                     }>
                     { this.renderDashboard() }
                 </ScrollView>
-                <AddPersonagem addPersonagem={() => this.props.navigation.navigate('addPerson') } />
+                <AddPersonagem addPersonagem={() => this.props.navigation.navigate('AddPerson') } />
             </ContainerApp>
         );
     }

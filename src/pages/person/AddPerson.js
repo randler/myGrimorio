@@ -6,13 +6,13 @@ import {
     ScrollView,
     Image,
     Text,
-    Picker,
     Dimensions,
     TextInput, 
     TouchableOpacity,
     StyleSheet
 } from 'react-native';
 import { connect } from 'react-redux';
+import { Picker } from '@react-native-picker/picker';
 
 import FormRow from '../../components/forms/FormRow';
 import CardAbility from '../../components/cards/CardAbility';
@@ -340,7 +340,7 @@ class AddPerson extends Component {
 
         const response = await this.props.salvarPersonagem(person);
         if(response) {
-           return this.props.navigation.replace('dashboard');
+           return this.props.navigation.navigate('Dashboard');
         }
     }
 
