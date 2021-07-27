@@ -132,10 +132,10 @@ class AddPerson extends Component {
         }
     }
     removerClasse(value) {
-        let newArrayClasse = this.state.classeArray;
-        const indexClasse = newArrayClasse.indexOf(value);
+        let newArrayClasse = this.state?.classeArray;
+        const indexClasse = newArrayClasse?.indexOf(value);
         if ( indexClasse > -1) {
-            newArrayClasse.splice(indexClasse, 1);
+            newArrayClasse?.splice(indexClasse, 1);
             let nivelTotal = 0;
 
             this.state.classeArray

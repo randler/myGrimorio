@@ -38,7 +38,7 @@ class Home extends React.Component {
         }
     }
 
-    async componentWillMount() {
+    async componentDidMount() {
         await this._retrieveID();
         this.props.getPerson(this.state.id);
         
@@ -51,19 +51,20 @@ class Home extends React.Component {
 
     getClassName = (arrayClass) => {
         let classe = '';
-        arrayClass.forEach(element => {
+        arrayClass?.forEach(element => {
             classe += element.name + '-' + element.level + '/'
         });
         return classe;
     }
 
     renderPersonData() {
+        console.log(this.props.persons);
         return Object.entries(this.props.persons).map((person, key) => (
                 <View style={styles.container} key={key}>
                     <View style={styles.containerHeader}>
                         <View style={styles.containerDesc}>
                                 <Text style={styles.name}>{person[1].name}</Text>
-                                <LineDescPerson label='Classe' value={this.getClassName(person[1].class)} />
+                                <LineDescPerson label='Classe' value={this.getClassName(person[1]?.class)} />
                                 <LineDescPerson label='Raça' value={person[1].race} />
                                 <LineDescPerson label='Tendência' value={person[1].tendency} />
                                 <LineDescPerson label='Antecedente' value={person[1].antecedent} />
@@ -78,10 +79,10 @@ class Home extends React.Component {
                                 </TouchableOpacity>
                             </View>  
                     </View>
-                    <Traces label='Traços de Personsalidade' value={person[1].antecedentTraces.personality} />
-                    <Traces label='Ideais' value={person[1].antecedentTraces.ideals} />
-                    <Traces label='Ligações' value={person[1].antecedentTraces.connections} />
-                    <Traces last label='Defeitos' value={person[1].antecedentTraces.defects} />
+                    <Traces label='Traços de Personsalidade' value={person[1]?.antecedentTraces.personality} />
+                    <Traces label='Ideais' value={person[1]?.antecedentTraces.ideals} />
+                    <Traces label='Ligações' value={person[1]?.antecedentTraces.connections} />
+                    <Traces last label='Defeitos' value={person[1]?.antecedentTraces.defects} />
                 </View>
             ))
     }

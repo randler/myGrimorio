@@ -20,7 +20,7 @@ import LinePersonagem from '../lines/LinePersonagem';
 
 const getLevel = (arrayClass) => {
     let nivel = 0;
-    arrayClass.forEach(element => {
+    arrayClass?.forEach(element => {
         nivel += element.level;
     });
     return nivel;
@@ -28,7 +28,7 @@ const getLevel = (arrayClass) => {
 
 const getClassName = (arrayClass) => {
     let classe = '';
-    arrayClass.forEach(element => {
+    arrayClass?.forEach(element => {
         classe += element.name + '-' + element.level + '/'
     });
     return classe;
