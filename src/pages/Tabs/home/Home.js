@@ -1,7 +1,6 @@
 //import liraries
 import React from 'react';
 import {
-    AsyncStorage,
     View,
     ScrollView,
     TouchableOpacity,
@@ -11,6 +10,7 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { firebase } from 'firebase';
+import { AsyncStorage } from '@react-native-async-storage/async-storage'
 
 import LineDescPerson from '../../../components/lines/LineDescPerson';
 import Traces from '../../../components/Traces';

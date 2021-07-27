@@ -105,6 +105,7 @@ class Dashboard extends Component {
                         <ActivityIndicator size="large" color = "#D6A200" />
                     </ContainerLoading>);
         } else if(this.props.persons) {
+            console.log(this.props.persons);
             return Object.entries(this.props.persons).map((personagem, key) => (
                     <TouchableOpacity 
                         key={key}

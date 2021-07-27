@@ -39,8 +39,8 @@ const CardPersonagem = ({personagem}) => {
         <View style={styles.container}>
             <View>
                 <LinePersonagem label='Nome' value={personagem.name ? personagem.name : '' }  />
-                <LinePersonagem label='Classe' min={personagem.class.length > 3 ? true : false} value={personagem.class ? getClassName(personagem.class) : '' }  />
-                <LinePersonagem label='Nível' value={personagem.class ? getLevel(personagem.class) : ''}  />
+                <LinePersonagem label='Classe' min={personagem.class && personagem.class.length > 3 ? true : false} value={personagem.class ? getClassName(personagem.class) : '' }  />
+                <LinePersonagem label='Nível' value={personagem.class && personagem.class ? getLevel(personagem.class) : ''}  />
                 <LinePersonagem label='Raça' value={ personagem.race ? personagem.race : '' }  />
                 <LinePersonagem label='Tendência' value={personagem.tendency ? personagem.tendency: ''}  />
             </View>

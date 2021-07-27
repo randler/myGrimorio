@@ -4,8 +4,8 @@ import { Dimensions } from 'react-native'
 export const ContainerApp = styled.View `
     flex: 1;
     backgroundColor: #DDD;
-    paddingTop: ${props => props.nothing ? 10 : 0 };
-    paddingBottom: ${props => props.nothing ? 10 : 0 };
+    paddingTop: ${props => props.nothing ? '10px' : 0 };
+    paddingBottom: ${props => props.nothing ? '10px' : 0 };
     paddingLeft: ${props => props.nothing ? 10 : 0 };
     paddingRight: ${props => props.nothing ? 10 : 0 };
     
@@ -30,7 +30,7 @@ export const ImageHeader = styled.Image `
     width: 30;
     height: ${props => props.logout ? 24 : 30 };
     marginRight: 20;
-    marginTop:  ${props => props.logout ? 10 : 0 };
+    marginTop:  ${props => props.logout ? '10px' : 0 };
     aspectRatio: 1;
 `;
 export const TextLogoutHeader = styled.Text `

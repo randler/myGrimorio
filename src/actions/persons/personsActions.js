@@ -27,6 +27,7 @@ export const getIdPerson = () => {
 export const salvarPersonagem = personagem => {
     const { currentUser } = firebase.auth();
 
+    console.log(personagem);
     return async dispatch => {
         try {
             await firebase.database()
